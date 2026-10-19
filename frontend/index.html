@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="vi" class="h-full bg-slate-50">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerBridge AI - Hệ thống Hướng nghiệp & Tuyển dụng Thông minh</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+</head>
+<body class="h-full flex flex-col text-slate-800 antialiased selection:bg-blue-100 selection:text-blue-800">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 text-white text-xs py-2 px-4 text-center font-medium shadow-inner flex items-center justify-center space-x-2">
+    <span class="flex h-2 w-2 relative">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+    </span>
+    <span><strong>Hệ thống AI Hướng nghiệp Quốc gia</strong>: Ghép nối việc làm thông minh, Chấm điểm ATS CV, Phỏng vấn thử Mock Interview & Phân tích thị trường</span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 sm:h-20">
+        
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="navigateTab('jobs')">
+          <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20 ring-4 ring-blue-50">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <div>
+            <div class="flex items-center space-x-1.5">
+              <span class="text-lg sm:text-xl font-black tracking-tight text-slate-900">CareerBridge</span>
+              <span class="text-xs font-extrabold uppercase px-1.5 py-0.5 rounded bg-blue-100 text-blue-700">AI</span>
+            </div>
+            <div class="text-[10px] text-slate-500 font-semibold tracking-wide hidden sm:block">Trung tâm Hướng nghiệp & Kết nối Nghề nghiệp</div>
+          </div>
+        </div>
+
+        <!-- Role Quick Switcher (For instant evaluator experience) -->
+        <div id="role-quick-switcher" class="hidden md:flex items-center"></div>
+
+        <!-- User Profile Widget -->
+        <div id="user-profile-widget" class="flex items-center space-x-3"></div>
+
+      </div>
+
+      <!-- Main Navigation Tabs -->
+      <nav id="main-nav-links" class="flex items-center space-x-1 sm:space-x-2 py-2 overflow-x-auto border-t border-slate-100"></nav>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+    <div id="app-content" class="min-h-[500px]">
+      <div class="flex items-center justify-center py-24 text-slate-400">
+        <div class="animate-spin inline-block w-8 h-8 border-4 border-current border-t-transparent rounded-full text-blue-600 mb-2"></div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-slate-200 mt-12 py-8 text-xs text-slate-500">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center space-x-2">
+        <span class="font-bold text-slate-800">CareerBridge AI v1.0</span>
+        <span>•</span>
+        <span>Giải pháp Chuyển đổi số Hướng nghiệp & Nâng cao tỷ lệ việc làm sinh viên</span>
+      </div>
+      <div class="flex items-center space-x-4 text-slate-600">
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('jobs')">Tìm việc</span>
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('cv')">Tối ưu CV</span>
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('interview')">Phỏng vấn thử</span>
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('roadmap')">Lộ trình kỹ năng</span>
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('analytics-market')">Thị trường</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Generic Modal Container -->
+  <div id="main-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">
+    <div class="bg-white rounded-3xl shadow-2xl max-w-2xl w-full overflow-hidden relative border border-slate-200 animate-in fade-in zoom-in duration-200" id="modal-content">
+    </div>
+  </div>
+
+  <!-- Floating Toast Notifications -->
+  <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col space-y-2 pointer-events-none"></div>
+
+  <!-- JavaScript Modules -->
+  <script src="/static/js/api.js"></script>
+  <script src="/static/js/app.js"></script>
+
+</body>
+</html>

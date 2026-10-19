@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Temporary / Large Archives
+*.zip
+*.tar.gz
+public_url.txt
+
+# Databases (optional: if you want fresh seed on deploy)
+*.db-journal
+*.db-wal
+*.db-shm
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
