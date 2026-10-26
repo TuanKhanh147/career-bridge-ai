@@ -109,3 +109,24 @@ def require_roles(*allowed_roles: str):
             )
         return user
     return role_checker
+
+def get_optional_user(credentials: Optional[HTTPAuthorizationCredentials] = Depends(security)) -> Optional[Dict[str, Any]]:
+    if not credentials:
+        return None
+    token = credentials.credentials
+    payload = decode_access_token(token)
+    if not payload or "sub" not in payload:
+        return None
+    user_id = payload["sub"]
+    try:
+        with db_session() as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM users WHERE id = ?", (user_id,))
+            row = cursor.fetchone()
+            if row:
+                user = dict(row)
+                if user.get("is_active"):
+                    return user
+    except Exception:
+        pass
+    return None

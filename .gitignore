@@ -14,7 +14,9 @@ ENV/
 *.tar.gz
 public_url.txt
 
-# Databases (optional: if you want fresh seed on deploy)
+# Databases (fresh seed on deploy)
+career_bridge.db
+*.db
 *.db-journal
 *.db-wal
 *.db-shm

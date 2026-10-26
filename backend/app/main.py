@@ -8,7 +8,7 @@ from fastapi.responses import FileResponse
 
 from .database import init_db
 from .seed_data import seed_database
-from .routers import auth, students, jobs, users, analytics
+from .routers import auth, students, jobs, users, analytics, chatbot
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -39,6 +39,7 @@ app.include_router(students.router)
 app.include_router(jobs.router)
 app.include_router(users.router)
 app.include_router(analytics.router)
+app.include_router(chatbot.router)
 
 @app.get("/api/health")
 def health_check():

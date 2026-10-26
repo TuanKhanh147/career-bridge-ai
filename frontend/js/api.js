@@ -199,6 +199,29 @@ const API = {
   // Analytics
   async getMarketTrends() {
     return this.request('/api/analytics/market-trends');
+  },
+
+  // AI Career Chatbot
+  async sendChatMessage(message, sessionId = null, context = null) {
+    return this.request('/api/chatbot/chat', {
+      method: 'POST',
+      body: JSON.stringify({ message, session_id: sessionId, context }),
+    });
+  },
+
+  async getChatSuggestions() {
+    return this.request('/api/chatbot/suggestions');
+  },
+
+  async getChatHistory(sessionId) {
+    return this.request(`/api/chatbot/history?session_id=${encodeURIComponent(sessionId)}`);
+  },
+
+  async clearChatHistory(sessionId) {
+    return this.request('/api/chatbot/clear', {
+      method: 'POST',
+      body: JSON.stringify({ session_id: sessionId }),
+    });
   }
 };
 

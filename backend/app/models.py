@@ -183,3 +183,17 @@ class SkillRoadmapOut(BaseModel):
     readiness_percentage: int
     milestones: List[Dict[str, Any]]
     created_at: str
+
+# AI Chatbot Models
+class ChatMessageRequest(BaseModel):
+    message: str
+    session_id: Optional[str] = None
+    context: Optional[Dict[str, Any]] = None
+
+class ChatMessageResponse(BaseModel):
+    reply: str
+    intent: str
+    session_id: str
+    suggestions: List[str] = []
+    suggested_jobs: Optional[List[Dict[str, Any]]] = None
+    created_at: str

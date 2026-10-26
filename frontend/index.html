@@ -93,6 +93,7 @@
       </div>
       <div class="flex items-center space-x-4 text-slate-600">
         <span class="hover:underline cursor-pointer" onclick="navigateTab('jobs')">Tìm việc</span>
+        <span class="hover:underline cursor-pointer" onclick="navigateTab('chatbot')">Trợ lý AI</span>
         <span class="hover:underline cursor-pointer" onclick="navigateTab('cv')">Tối ưu CV</span>
         <span class="hover:underline cursor-pointer" onclick="navigateTab('interview')">Phỏng vấn thử</span>
         <span class="hover:underline cursor-pointer" onclick="navigateTab('roadmap')">Lộ trình kỹ năng</span>
@@ -100,6 +101,103 @@
       </div>
     </div>
   </footer>
+
+  <!-- Floating AI Career Advisor Chatbot Widget -->
+  <div id="ai-chatbot-widget-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Chatbot Window/Drawer -->
+    <div id="chatbot-drawer" class="hidden w-[92vw] sm:w-[410px] h-[580px] max-h-[82vh] bg-white rounded-3xl shadow-2xl border border-slate-200/90 flex flex-col overflow-hidden mb-3 animate-in fade-in slide-in-from-bottom-5 duration-200">
+      <!-- Chatbot Header -->
+      <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-700 px-4 py-3.5 text-white flex items-center justify-between shadow-sm">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-md flex items-center justify-center text-xl shadow-inner border border-white/20">
+              🤖
+            </div>
+            <span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-emerald-400 border-2 border-white rounded-full"></span>
+          </div>
+          <div>
+            <div class="font-bold text-sm tracking-tight flex items-center space-x-1.5">
+              <span>CareerBridge AI Advisor</span>
+              <span class="text-[10px] bg-white/20 text-white font-extrabold px-1.5 py-0.5 rounded-full uppercase">PRO</span>
+            </div>
+            <div class="text-[11px] text-blue-100 flex items-center space-x-1">
+              <span class="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse"></span>
+              <span>Cố vấn nghề nghiệp trực tuyến 24/7</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex items-center space-x-1 text-white/80">
+          <button onclick="navigateTab('chatbot'); toggleChatbotDrawer(false);" title="Mở toàn màn hình" class="p-1.5 hover:bg-white/10 rounded-xl transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"></path></svg>
+          </button>
+          <button onclick="clearChatbotHistory()" title="Xóa đoạn chat" class="p-1.5 hover:bg-white/10 rounded-xl transition">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+          </button>
+          <button onclick="toggleChatbotDrawer(false)" title="Thu nhỏ" class="p-1.5 hover:bg-white/10 rounded-xl transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Chat Messages Container -->
+      <div id="chatbot-messages" class="flex-1 p-4 overflow-y-auto space-y-3.5 bg-slate-50 text-xs sm:text-sm">
+        <!-- Messages rendered via JS -->
+      </div>
+
+      <!-- Typing Indicator (Hidden by default) -->
+      <div id="chatbot-typing" class="hidden px-4 py-2 bg-slate-50 border-t border-slate-100 flex items-center space-x-2 text-xs text-slate-500">
+        <div class="flex space-x-1">
+          <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+          <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+          <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+        </div>
+        <span>AI đang phân tích và chuẩn bị câu trả lời...</span>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div id="chatbot-chips-bar" class="px-3 py-2 bg-white border-t border-slate-100 flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+        <!-- Suggestion chips rendered via JS -->
+      </div>
+
+      <!-- Chat Input Area -->
+      <div class="p-3 bg-white border-t border-slate-200">
+        <form id="chatbot-form" onsubmit="handleChatbotSubmit(event)" class="flex items-center space-x-2">
+          <input
+            type="text"
+            id="chatbot-input"
+            placeholder="Hỏi AI về việc làm, CV, phỏng vấn, mức lương..."
+            autocomplete="off"
+            class="flex-1 text-xs sm:text-sm px-3.5 py-2.5 bg-slate-100 border border-transparent rounded-2xl focus:bg-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+          />
+          <button
+            type="submit"
+            id="chatbot-send-btn"
+            class="p-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white rounded-2xl shadow-md transition flex items-center justify-center shrink-0"
+          >
+            <svg class="w-4 h-4 transform rotate-90" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Floating Chatbot Action Button (FAB) -->
+    <button
+      onclick="toggleChatbotDrawer()"
+      id="chatbot-fab"
+      class="group relative flex items-center space-x-2.5 px-4 py-3 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-full shadow-2xl shadow-blue-500/30 hover:scale-105 active:scale-95 transition-all duration-200 border-2 border-white/20"
+    >
+      <span class="absolute -top-1 -right-1 flex h-3.5 w-3.5">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-emerald-500 border-2 border-white"></span>
+      </span>
+      <div class="text-xl">🤖</div>
+      <div class="flex flex-col text-left">
+        <span class="text-xs font-black tracking-tight leading-none">Hỏi Trợ lý AI</span>
+        <span class="text-[9px] text-blue-100 font-semibold tracking-wide">Tư vấn nghề 24/7</span>
+      </div>
+    </button>
+  </div>
 
   <!-- Generic Modal Container -->
   <div id="main-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm hidden flex items-center justify-center p-4">

@@ -27,6 +27,12 @@ def seed_database():
             ("usr_rec06", "recruiter6@careerbridge.edu.vn", default_pwd, "Chị Hoàng Minh Phương (Senior HR BP)", "recruiter", "0963344556", "VinFast Auto HR Center", "Khối Nhân sự Tập đoàn", 2018, "Phát triển đội ngũ nhân tài trẻ phục vụ chiến lược toàn cầu của VinFast."),
             ("usr_rec07", "recruiter7@careerbridge.edu.vn", default_pwd, "Anh Ngô Tuấn Kiệt (Supply Chain Director)", "recruiter", "0974455667", "DHL Global Forwarding Vietnam", "Bộ phận Vận hành & Logistics", 2016, "Kết nối nhân tài chuỗi cung ứng với mạng lưới logistics toàn cầu."),
             ("usr_rec08", "recruiter8@careerbridge.edu.vn", default_pwd, "Chị Phan Bảo Trâm (Lead Product Designer)", "recruiter", "0985566778", "MoMo Fintech Product Studio", "Khối Trải nghiệm Người dùng UI/UX", 2019, "Kiến tạo trải nghiệm tài chính tiện lợi hàng đầu cho hàng chục triệu người Việt."),
+            ("usr_rec09", "recruiter9@careerbridge.edu.vn", default_pwd, "Chị Võ Thùy Trang (Head of E-commerce)", "recruiter", "0986677889", "Tiki & Lazada Commercial Hub", "Bộ phận Vận hành Sàn & Tăng trưởng TMĐT", 2017, "Săn đón các tài năng trẻ dẫn dắt xu hướng mua sắm trực tuyến."),
+            ("usr_rec10", "recruiter10@careerbridge.edu.vn", default_pwd, "TS. Dược sĩ Nguyễn Văn Hùng", "recruiter", "0987788990", "Sanofi & Dược Hậu Giang", "Bộ phận Nghiên cứu Lâm sàng & Đăng ký Thuốc", 2015, "Tìm kiếm các dược sĩ trẻ đam mê nghiên cứu thử nghiệm lâm sàng."),
+            ("usr_rec11", "recruiter11@careerbridge.edu.vn", default_pwd, "Anh Trần Đình Quý (Director of Hospitality)", "recruiter", "0988899001", "Vinpearl Resorts & Marriott", "Khối Vận hành Khách sạn & Trải nghiệm Khách hàng", 2016, "Phát triển đội ngũ quản lý khách sạn quốc tế thế hệ mới."),
+            ("usr_rec12", "recruiter12@careerbridge.edu.vn", default_pwd, "Luật sư Phạm Hải Đăng (Senior Legal Counsel)", "recruiter", "0989900112", "Vingroup Legal & YKVN Law", "Ban Pháp chế & Tư vấn Đầu tư Doanh nghiệp", 2014, "Đào tạo các cử nhân luật xuất sắc thành luật sư doanh nghiệp thực thụ."),
+            ("usr_rec13", "recruiter13@careerbridge.edu.vn", default_pwd, "Kỹ sư Trưởng Lê Văn Thắng (Chief BIM Coordinator)", "recruiter", "0981011223", "Coteccons Construction Group", "Trung tâm Quản lý Mô hình BIM & Công trình", 2015, "Số hóa toàn diện ngành xây dựng với các kỹ sư trẻ tài năng."),
+            ("usr_rec14", "recruiter14@careerbridge.edu.vn", default_pwd, "ThS. Hoàng Thu Thảo (Head of Academic Development)", "recruiter", "0982122334", "MindX & Topica EdTech", "Ban Phát triển Nội dung & Công nghệ Giáo dục", 2018, "Tiên phong ứng dụng công nghệ để nâng tầm giáo dục Việt Nam."),
 
             # Students across Diverse Disciplines
             # IT / Backend
@@ -54,7 +60,25 @@ def seed_database():
             ("usr_stu09", "khoa.ly@student.edu.vn", default_pwd, "Lý Anh Khoa", "student", "0981234565", "Đại học Kiến trúc TP.HCM", "Khoa Thiết kế Mỹ thuật Công nghiệp & UI/UX", 2026, "Đam mê xây dựng Design System và thiết kế giao diện lấy người dùng làm trung tâm trên Figma."),
             
             # Automation & Robotics
-            ("usr_stu10", "huy.tran@student.edu.vn", default_pwd, "Trần Quốc Huy", "student", "0981234566", "Đại học Bách Khoa", "Khoa Cơ điện tử & Tự động hóa", 2026, "Thành thạo lập trình PLC Siemens S7-1200, thiết kế mạch điện công nghiệp và cánh tay robot SCARA.")
+            ("usr_stu10", "huy.tran@student.edu.vn", default_pwd, "Trần Quốc Huy", "student", "0981234566", "Đại học Bách Khoa", "Khoa Cơ điện tử & Tự động hóa", 2026, "Thành thạo lập trình PLC Siemens S7-1200, thiết kế mạch điện công nghiệp và cánh tay robot SCARA."),
+
+            # NEW: E-commerce & Retail
+            ("usr_stu11", "linh.vu@student.edu.vn", default_pwd, "Vũ Mai Linh", "student", "0981234567", "Đại học Thương mại", "Khoa Thương mại Điện tử", 2026, "Đam mê vận hành sàn TMĐT Shopee/TikTok Shop, thành thạo livestream bán hàng và phân tích dữ liệu bán lẻ."),
+
+            # NEW: Healthcare & Pharma
+            ("usr_stu12", "khang.dang@student.edu.vn", default_pwd, "Đặng Tuấn Khang", "student", "0981234568", "Đại học Dược Hà Nội", "Khoa Dược học Lâm sàng", 2026, "Nắm chắc GCP/GLP, đọc hiểu tài liệu nghiên cứu thử nghiệm lâm sàng và quy chế đăng ký thuốc của Bộ Y Tế."),
+
+            # NEW: Hospitality & Tourism
+            ("usr_stu13", "vy.nguyen@student.edu.vn", default_pwd, "Nguyễn Khánh Vy", "student", "0981234569", "Đại học Ngoại ngữ - Tin học", "Khoa Quản trị Khách sạn & Du lịch", 2026, "GPA 3.65, IELTS 7.5, thành thạo phần mềm Opera PMS và quy chuẩn dịch vụ khách sạn 5 sao quốc tế."),
+
+            # NEW: Corporate Legal
+            ("usr_stu14", "duc.hoang@student.edu.vn", default_pwd, "Hoàng Lê Đức", "student", "0981234570", "Đại học Luật TP.HCM", "Khoa Luật Thương mại Quốc tế", 2026, "Thành thạo rà soát hợp đồng thương mại, luật sở hữu trí tuệ và tư vấn pháp chế doanh nghiệp."),
+
+            # NEW: Civil Engineering & BIM
+            ("usr_stu15", "nhan.bui@student.edu.vn", default_pwd, "Bùi Trọng Nhân", "student", "0981234571", "Đại học Xây dựng Hà Nội", "Khoa Kỹ thuật Công trình & BIM", 2026, "Chứng chỉ Autodesk Revit Professional, thành thạo kiểm tra xung đột BIM Navisworks và tính toán kết cấu Etabs."),
+
+            # NEW: EdTech & Education
+            ("usr_stu16", "diep.tran@student.edu.vn", default_pwd, "Trần Ngọc Diệp", "student", "0981234572", "Đại học Sư phạm Hà Nội", "Khoa Công nghệ Giáo dục & Sư phạm", 2026, "Đam mê thiết kế trải nghiệm học tập (Instructional Design), làm chủ hệ thống LMS Canvas và công cụ Articulate 360.")
         ]
 
         for u in users_data:
@@ -149,7 +173,61 @@ def seed_database():
              ["Kỹ thuật & Tự động hóa"],
              ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (TOEIC 780)"],
              ["Siemens Certified Automation Associate (TIA Portal)", "AutoCAD Certified Professional"],
-             "Họ và tên: Trần Quốc Huy\nEmail: huy.tran@student.edu.vn | SĐT: 0981234566\n\nHỌC VẤN:\n- Đại học Bách Khoa (2022 - 2026) - Cơ điện tử & Tự động hóa. GPA: 3.55/4.0.\n\nKỸ NĂNG:\n- Lập trình PLC Siemens S7-1200 / S7-1500 bằng ngôn ngữ Ladder (LAD) và Structured Control Language (SCL).\n- Thiết kế giao diện giám sát SCADA/HMI trên WinCC.\n- Thiết kế bản vẽ sơ đồ nguyên lý mạch điện điều khiển động cơ trên AutoCAD Electrical.\n\nDỰ ÁN:\n- Chế tạo mô hình Dây chuyền Phân loại và Đóng gói Sản phẩm tự động sử dụng cảm biến màu sắc và cánh tay robot, đạt giải Nhất Hội nghị Sinh viên Nghiên cứu Khoa học Khoa Cơ khí 2025.")
+             "Họ và tên: Trần Quốc Huy\nEmail: huy.tran@student.edu.vn | SĐT: 0981234566\n\nHỌC VẤN:\n- Đại học Bách Khoa (2022 - 2026) - Cơ điện tử & Tự động hóa. GPA: 3.55/4.0.\n\nKỸ NĂNG:\n- Lập trình PLC Siemens S7-1200 / S7-1500 bằng ngôn ngữ Ladder (LAD) và Structured Control Language (SCL).\n- Thiết kế giao diện giám sát SCADA/HMI trên WinCC.\n- Thiết kế bản vẽ sơ đồ nguyên lý mạch điện điều khiển động cơ trên AutoCAD Electrical.\n\nDỰ ÁN:\n- Chế tạo mô hình Dây chuyền Phân loại và Đóng gói Sản phẩm tự động sử dụng cảm biến màu sắc và cánh tay robot, đạt giải Nhất Hội nghị Sinh viên Nghiên cứu Khoa học Khoa Cơ khí 2025."),
+
+            # Student 11: E-commerce
+            ("usr_stu11", 3.62,
+             ["Vận hành Sàn TMĐT (Shopee/Lazada/TikTok Shop)", "Quản lý Gian hàng & Livestream", "Nghiên cứu Thị trường & Đối thủ", "Quảng cáo Nội sàn (Shopee Ads)", "Excel Phân tích Bán hàng"],
+             ["Thương mại Điện tử & Kinh doanh Quốc tế (E-commerce)", "E-commerce Operations Specialist"],
+             ["Thương mại Điện tử & Kinh doanh Quốc tế", "Digital Marketing & Truyền thông"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (IELTS 7.0)", "Tiếng Trung (HSK 4)"],
+             ["Alibaba B2B E-Commerce Specialist", "TikTok Shop Creator & Merchant Certified"],
+             "Họ và tên: Vũ Mai Linh\nEmail: linh.vu@student.edu.vn\nHỌC VẤN: Đại học Thương mại - Thương mại Điện tử. GPA: 3.62/4.0.\nKỸ NĂNG: Vận hành gian hàng Shopee Mall, TikTok Shop livestream, tối ưu GMV và tỷ lệ chuyển đổi.\nDỰ ÁN: Phát triển gian hàng phụ kiện công nghệ đạt doanh thu 450 triệu/tháng với 12.000 đơn hàng thành công."),
+
+            # Student 12: Healthcare & Pharma
+            ("usr_stu12", 3.70,
+             ["Dược lý & Thực hành Tốt (GCP/GLP/GMP)", "Đọc hiểu Tài liệu Lâm sàng", "Quy chế Đăng ký Thuốc & TBYT", "Phân tích Dữ liệu Y sinh", "Tiếng Anh Chuyên ngành Y Dược"],
+             ["Y tế & Dược phẩm (Healthcare & Pharma)", "Clinical Research Associate (CRA)"],
+             ["Y tế, Dược phẩm & Công nghệ Sinh học"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (IELTS 7.5)"],
+             ["Good Clinical Practice (GCP) NIDA Certification", "Chứng chỉ Đăng ký Thuốc & ACTD"],
+             "Họ và tên: Đặng Tuấn Khang\nEmail: khang.dang@student.edu.vn\nHỌC VẤN: Đại học Dược Hà Nội - Dược học. GPA: 3.70/4.0.\nKỸ NĂNG: Thử nghiệm lâm sàng, soạn thảo hồ sơ đăng ký thuốc theo định dạng ACTD, giám sát dược cảnh giác.\nDỰ ÁN: Tham gia nghiên cứu tương đương sinh học cho 2 dạng bào chế thuốc tim mạch, xuất bản 1 bài báo hội nghị Dược học Quốc gia 2025."),
+
+            # Student 13: Hospitality & Tourism
+            ("usr_stu13", 3.65,
+             ["Nghiệp vụ Tiền sảnh & Lễ tân (Front Office)", "Phần mềm Quản lý Khách sạn (Opera/Smile)", "Quy chuẩn Dịch vụ 5 Sao", "Tiếng Anh Du lịch & Giao tiếp Đa văn hóa", "Quản trị Doanh thu Khách sạn (Revenue Management)"],
+             ["Quản trị Khách sạn & Du lịch (Hospitality & Tourism)", "Hospitality Management Trainee"],
+             ["Du lịch, Khách sạn & Quản trị Dịch vụ"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (IELTS 7.5)", "Tiếng Pháp (Giao tiếp tốt)"],
+             ["AHLEI Certified Front Desk Representative (CFDR)"],
+             "Họ và tên: Nguyễn Khánh Vy\nEmail: vy.nguyen@student.edu.vn\nHỌC VẤN: ĐH Ngoại ngữ - Tin học - Quản trị Khách sạn. GPA: 3.65/4.0.\nKỸ NĂNG: Vận hành PMS Opera, kiểm soát chất lượng dịch vụ phòng và giải quyết tình huống khách VIP.\nKINH NGHIỆM: Thực tập sinh Tiền sảnh tại InterContinental Saigon, đạt danh hiệu 'Thực tập sinh tiêu biểu của quý'."),
+
+            # Student 14: Corporate Legal
+            ("usr_stu14", 3.68,
+             ["Rà soát & Soạn thảo Hợp đồng Thương mại", "Luật Doanh nghiệp & Luật Đầu tư", "Thủ tục Cấp phép & Đăng ký Kinh doanh", "Tư vấn Tuân thủ Pháp luật Lao động", "Pháp lý M&A (Mua bán & Sáp nhập)"],
+             ["Pháp chế Doanh nghiệp & Luật Kinh tế (Corporate Legal)", "Legal Executive"],
+             ["Luật Kinh tế & Pháp lý Doanh nghiệp"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (IELTS 7.5 - Legal English)"],
+             ["Chứng chỉ Đào tạo Luật sư Học viện Tư pháp (đang hoàn thành)"],
+             "Họ và tên: Hoàng Lê Đức\nEmail: duc.hoang@student.edu.vn\nHỌC VẤN: Đại học Luật TP.HCM - Luật Thương mại Quốc tế. GPA: 3.68/4.0.\nKỸ NĂNG: Soạn thảo hợp đồng mua bán hàng hóa quốc tế, rà soát pháp lý rủi ro (Due Diligence), tư vấn bảo vệ dữ liệu cá nhân Nghị định 13.\nDỰ ÁN: Giải Ba cuộc thi Phiên tòa Giả định Quốc tế (Moot Court) năm 2025."),
+
+            # Student 15: Civil Engineering & BIM
+            ("usr_stu15", 3.58,
+             ["Mô hình hóa Thông tin Công trình (Revit BIM)", "Bản vẽ Kỹ thuật AutoCAD 2D/3D", "Tính toán Kết cấu (Etabs/SAP2000)", "Dự toán Khối lượng & Chi phí Xây dựng", "Phối hợp BIM & Kiểm tra Xung đột (Navisworks)"],
+             ["Kỹ sư Xây dựng & Kiến trúc (Civil Engineering & BIM)", "BIM Engineer"],
+             ["Xây dựng, Kiến trúc & Quản lý Dự án"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (TOEIC 790)"],
+             ["Autodesk Certified Professional: Revit for Architectural & Structural Design"],
+             "Họ và tên: Bùi Trọng Nhân\nEmail: nhan.bui@student.edu.vn\nHỌC VẤN: Đại học Xây dựng Hà Nội - Kỹ thuật Xây dựng Dân dụng. GPA: 3.58/4.0.\nKỸ NĂNG: Mô hình hóa kiến trúc & kết cấu trên Revit 3D, kiểm tra xung đột MEP trên Navisworks, bóc tách khối lượng BOQ tự động.\nDỰ ÁN: Đồ án tốt nghiệp ứng dụng BIM Level 2 cho tổ hợp thương mại cao 25 tầng, giảm 18% xung đột kỹ thuật trước thi công."),
+
+            # Student 16: EdTech & Training
+            ("usr_stu16", 3.75,
+             ["Thiết kế Bài giảng & Giáo án Số", "Phương pháp Giảng dạy Hiện đại (Active Learning)", "Hệ thống Quản lý Học tập (LMS Moodle/Canvas)", "Thiết kế Trải nghiệm Học tập (Instructional Design)", "Tạo Nội dung Học liệu Số (Canva/Articulate)"],
+             ["Giáo dục & Công nghệ Giáo dục (EdTech & Training)", "Instructional Designer"],
+             ["Giáo dục & Công nghệ Giáo dục (EdTech)"],
+             ["Tiếng Việt (Bản ngữ)", "Tiếng Anh (IELTS 8.0)"],
+             ["Google Certified Educator Level 2", "Coursera Instructional Design Foundations"],
+             "Họ và tên: Trần Ngọc Diệp\nEmail: diep.tran@student.edu.vn\nHỌC VẤN: Đại học Sư phạm Hà Nội - Công nghệ Giáo dục. GPA: 3.75/4.0.\nKỸ NĂNG: Thiết kế chương trình học tích hợp Gamification, triển khai bài giảng tương tác trên LMS Canvas và phần mềm Storyline 360.\nDỰ ÁN: Thiết kế chuỗi 30 bài học STEM tương tác cho 1.200 học sinh trực tuyến, đạt mức độ hài lòng phản hồi 96%.")
         ]
 
         for p in profiles_data:
@@ -309,7 +387,61 @@ def seed_database():
              "- Tốt nghiệp hoặc sinh viên năm cuối ngành CNTT, Kỹ thuật Phần mềm.\n- Có kinh nghiệm phát triển ứng dụng di động với Flutter/Dart hoặc React Native.\n- Hiểu biết về vòng đời ứng dụng, quản lý state (Bloc, Provider, Redux) và kết nối REST API.\n- Chú trọng đến độ mượt mà của hiệu ứng chuyển động (60 FPS) và tối ưu dung lượng bộ nhớ.",
              "- Phát triển các màn hình tính năng mới theo thiết kế UI/UX.\n- Tối ưu hóa hiệu năng render và xử lý lưu trữ dữ liệu ngoại tuyến (Offline Storage).\n- Khắc phục lỗi và tối ưu trải nghiệm trên các dòng điện thoại Android và iOS khác nhau.",
              ["Flutter / Dart", "React Native", "REST API Integration", "Git", "State Management (Bloc/Riverpod)"],
-             "Công nghệ thông tin & Phần mềm", 3.0)
+             "Công nghệ thông tin & Phần mềm", 3.0),
+
+            # NEW INDUSTRY 10: E-commerce & Retail
+            ("job_18", "usr_rec09", "Chuyên viên Vận hành Sàn & Livestream Bán lẻ TMĐT (E-commerce Operations Trainee)", "Tiki & Shopee Official Hub",
+             "TP. Hồ Chí Minh", "Thực tập sinh (Internship)", "7.500.000 - 11.500.000 VNĐ",
+             "Vận hành gian hàng Shopee Mall, TikTok Shop và Lazada, tối ưu tỷ lệ chuyển đổi (CRO), doanh thu GMV và tổ chức Mega Livestream.",
+             "- Sinh viên năm 3, 4 hoặc mới tốt nghiệp ngành Thương mại điện tử, Marketing, Quản trị Kinh doanh.\n- Thành thạo thao tác kênh người bán (Seller Center) của Shopee, TikTok Shop hoặc Lazada.\n- Kỹ năng phân tích số liệu bán lẻ bằng Excel (Pivot, VLOOKUP) và tư duy tăng trưởng GMV.\n- Năng động, nhạy bén bắt kịp xu hướng người tiêu dùng trẻ.",
+             "- Quản lý danh mục sản phẩm (SKU), tối ưu hình ảnh, tiêu đề và từ khóa tìm kiếm nội sàn.\n- Lên kịch bản và điều phối kỹ thuật cho các buổi Livestream bán hàng định kỳ.\n- Theo dõi chỉ số vận hành đơn hàng, tỷ lệ hủy đơn và chăm sóc khách hàng sau bán.",
+             ["Vận hành Sàn TMĐT", "Quản lý Gian hàng & Livestream", "Nghiên cứu Thị trường", "Quảng cáo Nội sàn (Shopee Ads)", "Excel Phân tích Bán hàng"],
+             "Thương mại Điện tử & Kinh doanh Quốc tế", 2.8),
+
+            # NEW INDUSTRY 11: Healthcare & Pharma
+            ("job_19", "usr_rec10", "Chuyên viên Nghiên cứu Lâm sàng & Đăng ký Thuốc (Clinical Research / Regulatory Associate)", "Sanofi Vietnam",
+             "TP. Hồ Chí Minh", "Mới tốt nghiệp (Fresher)", "13.000.000 - 19.000.000 VNĐ",
+             "Gia nhập tập đoàn dược phẩm đa quốc gia Sanofi, tham gia thẩm định hồ sơ thử nghiệm lâm sàng và đăng ký lưu hành thuốc tại Việt Nam.",
+             "- Tốt nghiệp Đại học chuyên ngành Dược học (Dược sĩ Đại học), Công nghệ Sinh học hoặc Y khoa.\n- Nắm chắc hướng dẫn GCP/GLP của Bộ Y tế và tiêu chuẩn quốc tế ICH-GCP.\n- Kỹ năng đọc hiểu và dịch thuật tài liệu y khoa tiếng Anh lưu loát (IELTS 6.5 trở lên).\n- Tinh thần trách nhiệm cao, tỉ mỉ và tuân thủ nghiêm ngặt y đức.",
+             "- Soạn thảo và hoàn thiện hồ sơ đăng ký thuốc, thực phẩm bảo vệ sức khỏe theo chuẩn ACTD.\n- Giám sát tiến độ và tính tuân thủ quy trình tại các điểm nghiên cứu thử nghiệm lâm sàng.\n- Theo dõi và tổng hợp báo cáo phản ứng có hại của thuốc (ADR / Pharmacovigilance).",
+             ["Dược lý & Thực hành Tốt (GCP/GLP/GMP)", "Đọc hiểu Tài liệu Lâm sàng", "Quy chế Đăng ký Thuốc & TBYT", "Phân tích Dữ liệu Y sinh"],
+             "Y tế, Dược phẩm & Công nghệ Sinh học", 3.2),
+
+            # NEW INDUSTRY 12: Hospitality & Tourism
+            ("job_20", "usr_rec11", "Quản trị viên Tập sự Khách sạn Quốc tế (Hospitality Management Trainee 5*)", "Vinpearl Resorts & Hotels",
+             "Nha Trang / Đà Nẵng / Phú Quốc", "Thực tập sinh (Internship)", "8.000.000 - 12.000.000 VNĐ",
+             "Chương trình đào tạo cán bộ nguồn tương lai tại chuỗi nghỉ dưỡng 5 sao tiêu chuẩn quốc tế (Hỗ trợ toàn bộ chi phí ăn ở, đi lại).",
+             "- Sinh viên năm cuối hoặc mới tốt nghiệp chuyên ngành Quản trị Khách sạn, Du lịch, Ngoại ngữ hoặc Kinh tế.\n- Tiếng Anh giao tiếp lưu loát (IELTS 6.5 hoặc tương đương, biết thêm ngoại ngữ thứ 2 là lợi thế lớn).\n- Ngoại hình chỉn chu, tác phong chuyên nghiệp, tinh thần hiếu khách (Hospitality Mindset).\n- Sẵn sàng luân chuyển và làm việc linh hoạt theo ca.",
+             "- Tham gia luân chuyển đào tạo qua các bộ phận: Tiền sảnh (Front Office), Dịch vụ Ẩm thực (F&B) và Quản trị Doanh thu.\n- Đón tiếp và chăm sóc các đoàn khách VIP quốc tế theo quy chuẩn 5 sao.\n- Thực hiện đề án tối ưu hóa trải nghiệm khách hàng (Guest Journey) dưới sự hướng dẫn của Tổng quản lý.",
+             ["Nghiệp vụ Tiền sảnh & Lễ tân", "Phần mềm Opera PMS", "Quy chuẩn Dịch vụ 5 Sao", "Tiếng Anh Du lịch & Giao tiếp Đa văn hóa"],
+             "Du lịch, Khách sạn & Quản trị Dịch vụ", 3.0),
+
+            # NEW INDUSTRY 13: Corporate Law & Legal
+            ("job_21", "usr_rec12", "Chuyên viên Pháp chế Doanh nghiệp & Tư vấn Hợp đồng (Corporate Legal Counsel)", "Tập đoàn Vingroup",
+             "Hà Nội", "Mới tốt nghiệp (Fresher)", "12.000.000 - 18.000.000 VNĐ",
+             "Làm việc tại Ban Pháp chế Tập đoàn Vingroup, tham gia rà soát hợp đồng kinh tế và tư vấn tuân thủ pháp lý cho các công ty thành viên.",
+             "- Tốt nghiệp Cử nhân Luật (ĐH Luật Hà Nội, ĐH Luật TP.HCM, Khoa Luật ĐHQG) loại Khá trở lên.\n- Nắm vững Luật Doanh nghiệp, Luật Đầu tư, Luật Thương mại và Bộ luật Dân sự.\n- Kỹ năng soạn thảo văn bản pháp lý mạch lạc, lập luận logic và tư duy phản biện sắc bén.\n- Khả năng đọc hiểu tài liệu và hợp đồng thương mại song ngữ Anh - Việt.",
+             "- Soạn thảo và thẩm định các hợp đồng kinh tế, thỏa thuận hợp tác kinh doanh và bảo mật (NDA).\n- Hỗ trợ thực hiện các thủ tục đăng ký doanh nghiệp, thay đổi nội dung đăng ký kinh doanh và giấy phép con.\n- Rà soát các quy chế nội bộ, chính sách bảo vệ dữ liệu cá nhân theo Nghị định 13/2023/NĐ-CP.",
+             ["Rà soát & Soạn thảo Hợp đồng", "Luật Doanh nghiệp & Luật Đầu tư", "Thủ tục Cấp phép Kinh doanh", "Tư vấn Pháp luật Lao động"],
+             "Luật Kinh tế & Pháp lý Doanh nghiệp", 3.2),
+
+            # NEW INDUSTRY 14: Civil Engineering & Architecture
+            ("job_22", "usr_rec13", "Kỹ sư Mô hình Thông tin Công trình (BIM Revit Coordinator Fresher)", "Coteccons Construction Group",
+             "TP. Hồ Chí Minh / Hà Nội", "Mới tốt nghiệp (Fresher)", "13.000.000 - 20.000.000 VNĐ",
+             "Đóng vai trò nòng cốt trong chiến lược số hóa công trường của Tổng thầu Coteccons, ứng dụng công nghệ BIM từ thiết kế đến thi công.",
+             "- Tốt nghiệp Đại học chuyên ngành Kỹ thuật Xây dựng, Kiến trúc, Cơ điện công trình (MEP).\n- Thành thạo dựng mô hình 3D trên Autodesk Revit (Architecture / Structure / MEP).\n- Biết sử dụng Navisworks để phát hiện xung đột (Clash Detection) và phối hợp mô hình đa bộ môn.\n- Có chứng chỉ Autodesk Certified hoặc hoàn thành đồ án ứng dụng BIM là điểm cộng lớn.",
+             "- Dựng và quản lý mô hình BIM 3D phục vụ công tác thiết kế bản vẽ thi công (Shop Drawing).\n- Phối hợp với ban chỉ huy công trường kiểm tra sai lệch kết cấu và xung đột hệ thống kỹ thuật.\n- Xuất khối lượng vật tư (BOQ) tự động từ mô hình phục vụ công tác đấu thầu và nghiệm thu.",
+             ["Mô hình hóa Revit BIM", "Bản vẽ Kỹ thuật AutoCAD", "Tính toán Kết cấu (Etabs)", "Phối hợp Navisworks Clash Detection"],
+             "Xây dựng, Kiến trúc & Quản lý Dự án", 2.8),
+
+            # NEW INDUSTRY 15: EdTech & Education
+            ("job_23", "usr_rec14", "Chuyên viên Thiết kế Trải nghiệm Học tập & Nội dung EdTech (Instructional Designer)", "MindX Technology School",
+             "Hà Nội / TP. Hồ Chí Minh", "Mới tốt nghiệp (Fresher)", "11.000.000 - 17.000.000 VNĐ",
+             "Kiến tạo các chương trình học công nghệ và kỹ năng thế kỷ 21 cho hơn 50.000 học viên trên toàn quốc tại hệ sinh thái giáo dục MindX.",
+             "- Tốt nghiệp Đại học các ngành Sư phạm, Công nghệ Giáo dục, Ngôn ngữ hoặc CNTT.\n- Có hiểu biết về các mô hình thiết kế sư phạm hiện đại (ADDIE, Bloom's Taxonomy, Gamification).\n- Kỹ năng biên soạn bài giảng sinh động, tạo bài giảng điện tử tương tác (Storyline 360, Canva, Genially).\n- Đam mê giáo dục và mong muốn ứng dụng AI vào việc cá nhân hóa lộ trình học.",
+             "- Thiết kế khung chương trình (Curriculum) và lộ trình học tập theo năng lực học viên.\n- Sản xuất video bài giảng, bộ câu hỏi trắc nghiệm tương tác và dự án thực hành (Project-based Learning).\n- Đo lường chỉ số hoàn thành khóa học và phản hồi từ người học để liên tục cải tiến chất lượng.",
+             ["Thiết kế Bài giảng Số", "Phương pháp Giảng dạy Hiện đại", "LMS Moodle/Canvas", "Thiết kế Trải nghiệm Học tập (Instructional Design)"],
+             "Giáo dục & Công nghệ Giáo dục (EdTech)", 3.0)
         ]
 
         for j in jobs_data:
@@ -336,7 +468,13 @@ def seed_database():
             ("app_07", "job_12", "usr_stu07", "applied", "Em có chứng chỉ Khai báo Hải quan và nắm vững Incoterms 2020. Rất mong muốn được đóng góp cho mạng lưới vận hành DHL."),
             ("app_08", "job_13", "usr_stu08", "reviewing", "Em đã có kinh nghiệm tuyển dụng 18 nhân sự kỹ thuật bằng mô hình phỏng vấn STAR, rất mong muốn gia nhập VinFast."),
             ("app_09", "job_14", "usr_stu09", "interview_scheduled", "Em xin gửi kèm link Dribbble Portfolio các dự án thiết kế Design System và Mobile App tài chính cho MoMo xem xét."),
-            ("app_10", "job_15", "usr_stu10", "applied", "Em đã đạt giải Nhất NCKH với đề tài mô hình dây chuyền phân loại tự động sử dụng PLC Siemens S7-1200.")
+            ("app_10", "job_15", "usr_stu10", "applied", "Em đã đạt giải Nhất NCKH với đề tài mô hình dây chuyền phân loại tự động sử dụng PLC Siemens S7-1200."),
+            ("app_11", "job_18", "usr_stu11", "interview_scheduled", "Em đã từng xây dựng gian hàng Shopee Mall đạt doanh số 450 triệu/tháng, rất mong muốn gia nhập đội ngũ vận hành Tiki Hub."),
+            ("app_12", "job_19", "usr_stu12", "applied", "Em có chứng chỉ GCP và kinh nghiệm nghiên cứu tương đương sinh học, mong muốn đóng góp cho các nghiên cứu lâm sàng của Sanofi."),
+            ("app_13", "job_20", "usr_stu13", "accepted", "Em thành thạo phần mềm Opera PMS và từng đạt Thực tập sinh xuất sắc tại InterContinental, rất vinh dự gia nhập Vinpearl."),
+            ("app_14", "job_21", "usr_stu14", "reviewing", "Em đã có kinh nghiệm rà soát hợp đồng thương mại quốc tế và giải Ba Moot Court, mong muốn gia nhập Ban Pháp chế Vingroup."),
+            ("app_15", "job_22", "usr_stu15", "interview_scheduled", "Em có chứng chỉ Autodesk Revit Professional và đồ án ứng dụng BIM Level 2 cho công trình cao 25 tầng cho Coteccons."),
+            ("app_16", "job_23", "usr_stu16", "applied", "Em đã thiết kế chuỗi 30 bài học STEM tương tác cho 1.200 học sinh với tỷ lệ hài lòng 96%, rất mong muốn đồng hành cùng MindX.")
         ]
 
         for app in apps_data:
@@ -373,4 +511,4 @@ def seed_database():
                 VALUES (?, ?, ?, ?, ?)
             """, (*l, now.isoformat()))
 
-        print("✅ Multi-industry database seeded successfully: 18 users, 10 profiles, 17 jobs across 10 industries, 10 applications.")
+        print("✅ Multi-industry database seeded successfully: 31 users, 16 student profiles, 23 jobs across 16 major industries, 16 applications.")

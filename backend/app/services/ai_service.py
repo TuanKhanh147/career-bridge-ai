@@ -94,6 +94,42 @@ ROLE_SKILL_TAXONOMY = {
         "advanced": ["Cánh tay Robot Công nghiệp", "Thị giác Máy tính (Machine Vision)", "Industrial IoT (MQTT/Modbus)", "Bảo trì Dự đoán"],
         "soft": ["Safety Protocol", "Hands-on Troubleshooting", "Systems Engineering"],
         "keywords": ["ladder logic", "hmi screen", "servo motor", "sensor calibration", "modbus rtu", "safety interlock", "chu trình tự động"]
+    },
+    "Thương mại Điện tử & Kinh doanh Quốc tế (E-commerce)": {
+        "core": ["Vận hành Sàn TMĐT (Shopee/Lazada/TikTok Shop)", "Quản lý Gian hàng & Livestream", "Nghiên cứu Thị trường & Đối thủ", "Xử lý Đơn hàng & CSKH", "Excel Phân tích Bán hàng"],
+        "advanced": ["Tối ưu Tỷ lệ Chuyển đổi (CRO)", "Quảng cáo Nội sàn (Shopee Ads/Lazada Ads)", "Xúc tiến Xuất nhập khẩu B2B (Alibaba)", "Chiến lược Định giá Dynamic Pricing"],
+        "soft": ["Khả năng thích ứng nhanh", "Kỹ năng đàm phán", "Tư duy dịch vụ khách hàng"],
+        "keywords": ["gmv", "aov", "conversion rate", "traffic nội sàn", "flash sale", "livestream", "cross-border", "sku optimization"]
+    },
+    "Y tế & Dược phẩm (Healthcare & Pharma)": {
+        "core": ["Dược lý & Thực hành Tốt (GCP/GLP/GMP)", "Đọc hiểu Tài liệu Lâm sàng", "Quy chế Đăng ký Thuốc & TBYT", "Phân tích Dữ liệu Y sinh", "Kỹ năng Tư vấn Y khoa"],
+        "advanced": ["Nghiên cứu Thử nghiệm Lâm sàng (Clinical Trials)", "Dược cảnh giác (Pharmacovigilance)", "Market Access & Đấu thầu Thuốc", "Sinh học Phân tử & Công nghệ Gen"],
+        "soft": ["Đạo đức y tế & Tuân thủ", "Tỉ mỉ & Cẩn trọng tuyệt đối", "Giao tiếp chuyên gia y tế"],
+        "keywords": ["clinical trial", "regulatory affairs", "gmp compliance", "pharmacokinetics", "dược lực học", "hồ sơ actd", "đấu thầu bảo hiểm y tế"]
+    },
+    "Quản trị Khách sạn & Du lịch (Hospitality & Tourism)": {
+        "core": ["Nghiệp vụ Tiền sảnh & Lễ tân (Front Office)", "Phần mềm Quản lý Khách sạn (Opera/Smile)", "Quy chuẩn Dịch vụ 5 Sao", "Tiếng Anh Du lịch & Giao tiếp Đa văn hóa", "Xử lý Khiếu nại Khách hàng"],
+        "advanced": ["Quản trị Doanh thu Khách sạn (Revenue Management)", "Tổ chức Sự kiện & Hội nghị (MICE)", "Quản trị Trải nghiệm Khách hàng cao cấp (CX)", "Thiết kế Tour Trải nghiệm"],
+        "soft": ["Thấu cảm & Năng lượng tích cực", "Quản lý khủng hoảng dịch vụ", "Lãnh đạo đội ngũ vận hành"],
+        "keywords": ["adr", "revpar", "occupancy rate", "opera pms", "guest journey", "upselling", "butler service", "tiêu chuẩn service 5 sao"]
+    },
+    "Pháp chế Doanh nghiệp & Luật Kinh tế (Corporate Legal)": {
+        "core": ["Rà soát & Soạn thảo Hợp đồng Thương mại", "Luật Doanh nghiệp & Luật Đầu tư", "Thủ tục Cấp phép & Đăng ký Kinh doanh", "Tư vấn Tuân thủ Pháp luật Lao động", "Nghiên cứu Án lệ & Văn bản Pháp quy"],
+        "advanced": ["Pháp lý M&A (Mua bán & Sáp nhập)", "Sở hữu Trí tuệ & Chuyển giao Công nghệ", "Giải quyết Tranh chấp Thương mại (VIAC)", "Pháp lý Dữ liệu Cá nhân & Nghị định 13"],
+        "soft": ["Tư duy phản biện sắc bén", "Lập luận logic & Chặt chẽ", "Bảo mật thông tin tối mật"],
+        "keywords": ["due diligence", "nda", "hợp đồng kinh tế", "m&a", "sở hữu trí tuệ", "tuân thủ pháp chế", "giải quyết tranh chấp", "nghị định 13"]
+    },
+    "Kỹ sư Xây dựng & Kiến trúc (Civil Engineering & BIM)": {
+        "core": ["Mô hình hóa Thông tin Công trình (Revit BIM)", "Bản vẽ Kỹ thuật AutoCAD 2D/3D", "Tính toán Kết cấu (Etabs/SAP2000)", "Dự toán Khối lượng & Chi phí Xây dựng", "Quy chuẩn & Tiêu chuẩn Xây dựng (TCVN)"],
+        "advanced": ["Phối hợp BIM & Kiểm tra Xung đột (Navisworks)", "Quản lý Dự án Thi công (Primavera P6/MS Project)", "Kết cấu Thép & Bê tông Dự ứng lực", "Công trình Xanh & Bền vững (LEED/LOTUS)"],
+        "soft": ["An toàn lao động trên công trường", "Điều phối nhà thầu phụ", "Làm việc nhóm kỷ luật"],
+        "keywords": ["bim revit", "clash detection", "etabs", "khối lượng boq", "biện pháp thi công", "tiến độ gantt", "nghiệm thu kết cấu", "an toàn lao động"]
+    },
+    "Giáo dục & Công nghệ Giáo dục (EdTech & Training)": {
+        "core": ["Thiết kế Bài giảng & Giáo án Số", "Phương pháp Giảng dạy Hiện đại (Active Learning)", "Hệ thống Quản lý Học tập (LMS Moodle/Canvas)", "Kỹ năng Thuyết trình & Sư phạm", "Tạo Nội dung Học liệu Số (Canva/Articulate)"],
+        "advanced": ["Thiết kế Trải nghiệm Học tập (Instructional Design)", "Phát triển Khóa học E-learning Tương tác", "Phân tích Hiệu quả Đào tạo (Kirkpatrick)", "Ứng dụng AI trong Cá nhân hóa Học tập"],
+        "soft": ["Kiên nhẫn & Truyền cảm hứng", "Lắng nghe & Khích lệ học viên", "Tư duy sáng tạo phương pháp"],
+        "keywords": ["instructional design", "lms canvas", "blended learning", "gamification giáo dục", "đánh giá rubrics", "microlearning", "edtech product"]
     }
 }
 
@@ -536,4 +572,298 @@ def generate_skill_roadmap(target_role: str, current_skills: List[str]) -> Dict[
         "missing_skills": missing,
         "readiness_percentage": readiness,
         "milestones": milestones
+    }
+
+# 4. AI Career Advisor Chatbot Engine
+def generate_career_chat_response(
+    message: str,
+    session_id: str,
+    context: Optional[Dict[str, Any]] = None,
+    user_id: Optional[str] = None
+) -> Dict[str, Any]:
+    from ..database import db_session
+    from datetime import datetime
+    import uuid
+
+    msg_clean = message.strip()
+    msg_lower = msg_clean.lower()
+    now_iso = datetime.now().isoformat()
+    context = context or {}
+
+    # Extract user profile context if available
+    student_name = context.get("full_name") or "bạn"
+    student_major = context.get("major") or ""
+    student_skills = context.get("skills") or []
+    student_roles = context.get("dream_roles") or []
+
+    intent = "general_faq"
+    reply = ""
+    suggestions = []
+    suggested_jobs = []
+
+    # Intent Detection
+    is_job_search = any(k in msg_lower for k in ["tìm việc", "việc làm", "tuyển dụng", "thực tập", "fresher", "intern", "công việc", "apply", "ứng tuyển", "vị trí"])
+    is_salary = any(k in msg_lower for k in ["lương", "thu nhập", "mức lương", "bao nhiêu tiền", "đãi ngộ", "deal lương", "salary"])
+    is_cv = any(k in msg_lower for k in ["cv", "hồ sơ", "ats", "viết cv", "portfolio", "sửa cv", "resume"])
+    is_interview = any(k in msg_lower for k in ["phỏng vấn", "interview", "trả lời câu hỏi", "điểm yếu", "giới thiệu bản thân", "nhà tuyển dụng hỏi"])
+    is_roadmap = any(k in msg_lower for k in ["lộ trình", "roadmap", "học gì", "bắt đầu từ đâu", "tự học", "khóa học", "kỹ năng cần có"])
+    is_guidance = any(k in msg_lower for k in ["định hướng", "chọn ngành", "chọn nghề", "phù hợp", "không biết làm gì", "chuyển ngành", "tương lai", "nghề gì hot"])
+
+    # Attempt LLM call if GEMINI_API_KEY is configured
+    llm_succeeded = False
+    if GEMINI_API_KEY:
+        try:
+            system_prompt = (
+                "Bạn là CareerBridge AI - Chuyên gia Cố vấn Hướng nghiệp và Tuyển dụng hàng đầu Việt Nam. "
+                "Nhiệm vụ của bạn là hỗ trợ sinh viên định hướng nghề nghiệp, tìm việc làm, tối ưu CV, luyện phỏng vấn, "
+                "và xây dựng lộ trình nâng cao kỹ năng cho 16+ ngành nghề tại Việt Nam. "
+                "Phong cách: Tận tâm, chuyên nghiệp, khích lệ, dùng định dạng Markdown rõ ràng, gạch đầu dòng và số liệu định lượng."
+            )
+            context_prompt = ""
+            if student_major or student_skills:
+                context_prompt = f"Thông tin sinh viên: Tên {student_name}, Ngành {student_major}, Kỹ năng: {', '.join(student_skills[:5])}, Mục tiêu: {', '.join(student_roles[:3])}. "
+
+            gemini_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={GEMINI_API_KEY}"
+            payload = {
+                "contents": [
+                    {"role": "user", "parts": [{"text": f"{system_prompt}\n{context_prompt}\nCâu hỏi của sinh viên: {msg_clean}"}]}
+                ],
+                "generationConfig": {"temperature": 0.7, "maxOutputTokens": 1000}
+            }
+            with httpx.Client(timeout=10.0) as client:
+                res = client.post(gemini_url, json=payload)
+                if res.status_code == 200:
+                    data = res.json()
+                    candidates = data.get("candidates", [])
+                    if candidates and "content" in candidates[0]:
+                        reply = candidates[0]["content"]["parts"][0]["text"]
+                        llm_succeeded = True
+        except Exception:
+            llm_succeeded = False
+
+    # High-Fidelity Domain Knowledge Engine (Active when no LLM key or offline fallback)
+    if not llm_succeeded:
+        if is_job_search:
+            intent = "job_search"
+            # Search database for matching jobs
+            with db_session() as conn:
+                cursor = conn.cursor()
+                # Find matching jobs by searching title, description, or industry
+                search_terms = [t for t in ["AI", "Backend", "Frontend", "Data", "Marketing", "Tài chính", "Logistics", "HR", "Design", "Tự động hóa", "Phần mềm", "Thương mại", "Dược", "Khách sạn", "Luật", "BIM", "Giáo dục"] if t.lower() in msg_lower]
+                
+                query = "SELECT * FROM job_postings WHERE is_active = 1"
+                params = []
+                if search_terms:
+                    query += " AND (" + " OR ".join(["title LIKE ? OR industry LIKE ? OR required_skills LIKE ?" for _ in search_terms]) + ")"
+                    for term in search_terms:
+                        params.extend([f"%{term}%", f"%{term}%", f"%{term}%"])
+                query += " ORDER BY created_at DESC LIMIT 4"
+                
+                cursor.execute(query, params)
+                rows = cursor.fetchall()
+                if not rows:
+                    cursor.execute("SELECT * FROM job_postings WHERE is_active = 1 ORDER BY created_at DESC LIMIT 4")
+                    rows = cursor.fetchall()
+                
+                for r in rows:
+                    skills_list = []
+                    try:
+                        skills_list = json.loads(r["required_skills"])
+                    except Exception:
+                        skills_list = []
+                    suggested_jobs.append({
+                        "id": r["id"],
+                        "title": r["title"],
+                        "company_name": r["company_name"],
+                        "location": r["location"],
+                        "salary_range": r["salary_range"],
+                        "job_type": r["job_type"],
+                        "industry": r["industry"],
+                        "required_skills": skills_list[:4]
+                    })
+
+            reply = f"Chào **{student_name}**, tôi đã quét qua hệ thống và tìm thấy các cơ hội thực tập & việc làm nổi bật phù hợp với bạn:\n\n"
+            for idx, j in enumerate(suggested_jobs, 1):
+                reply += f"### {idx}. {j['title']} — **{j['company_name']}**\n"
+                reply += f"- 📍 **Địa điểm**: {j['location']} | 🏷️ **Hình thức**: {j['job_type']}\n"
+                reply += f"- 💰 **Mức lương**: `{j['salary_range']}`\n"
+                reply += f"- 🛠️ **Kỹ năng chính**: {', '.join(j['required_skills'])}\n"
+                reply += f"- 🔗 *Bạn có thể xem chi tiết và nộp hồ sơ trực tiếp trong tab **Việc làm**.*\n\n"
+
+            reply += "> 💡 **Lời khuyên AI**: Hãy dùng tính năng **Tối ưu CV (ATS)** trước khi nộp để tăng tỷ lệ được gọi phỏng vấn lên 90%!"
+            suggestions = [
+                "Cách viết CV chuẩn ATS cho vị trí này",
+                "Mức lương trung bình của vị trí này là bao nhiêu?",
+                "Phỏng vấn thử cho vị trí này"
+            ]
+
+        elif is_salary:
+            intent = "salary_inquiry"
+            reply = (
+                f"Chào **{student_name}**, dưới đây là bảng thống kê **Mức lương Thị trường 2026** cho Thực tập sinh (Intern) và Mới tốt nghiệp (Fresher) tại Việt Nam:\n\n"
+                "| Nhóm ngành nghề | Mức lương Thực tập (Intern) | Mức lương Fresher (0-1 năm KN) |\n"
+                "| :--- | :--- | :--- |\n"
+                "| 🤖 **AI & Khoa học Dữ liệu** | 7.0 - 12.0 triệu VNĐ | 14.0 - 25.0 triệu VNĐ |\n"
+                "| 💻 **CNTT & Kỹ sư Phần mềm** | 6.0 - 10.0 triệu VNĐ | 12.0 - 20.0 triệu VNĐ |\n"
+                "| 🛡️ **An toàn Thông tin (Cyber)** | 6.5 - 11.0 triệu VNĐ | 13.0 - 22.0 triệu VNĐ |\n"
+                "| 📊 **Phân tích Tài chính & Đầu tư** | 6.0 - 10.0 triệu VNĐ | 12.0 - 22.0 triệu VNĐ |\n"
+                "| 📢 **Digital Marketing & Ads** | 5.0 - 8.5 triệu VNĐ | 9.0 - 16.0 triệu VNĐ |\n"
+                "| 🚚 **Logistics & Chuỗi Cung ứng** | 5.5 - 9.0 triệu VNĐ | 9.5 - 16.5 triệu VNĐ |\n"
+                "| 🎨 **UI/UX & Product Design** | 6.0 - 10.0 triệu VNĐ | 11.0 - 18.0 triệu VNĐ |\n"
+                "| ⚙️ **Kỹ thuật & Tự động hóa** | 6.5 - 10.5 triệu VNĐ | 11.0 - 19.0 triệu VNĐ |\n"
+                "| 🛒 **E-commerce Operations** | 5.0 - 8.5 triệu VNĐ | 9.0 - 15.0 triệu VNĐ |\n"
+                "| 💊 **Y tế & Dược lâm sàng** | 5.5 - 9.0 triệu VNĐ | 10.0 - 17.0 triệu VNĐ |\n"
+                "| ⚖️ **Pháp chế Doanh nghiệp** | 5.0 - 8.0 triệu VNĐ | 9.0 - 16.0 triệu VNĐ |\n\n"
+                "> 💡 **Bí quyết deal lương**: Đừng chỉ nêu con số mong muốn, hãy chứng minh bằng **dự án thực chiến**, chứng chỉ uy tín và kết quả bài test kỹ thuật!"
+            )
+            suggestions = [
+                "Cách trả lời khi nhà tuyển dụng hỏi mức lương mong muốn",
+                "Tìm việc thực tập lương từ 8 triệu",
+                "Lộ trình tăng lương sau 1 năm đi làm"
+            ]
+
+        elif is_cv:
+            intent = "cv_advice"
+            reply = (
+                f"Chào **{student_name}**, để CV của bạn vượt qua hệ thống lọc tự động (ATS) và chinh phục nhà tuyển dụng trong 6 giây đầu tiên, hãy áp dụng bộ nguyên tắc sau:\n\n"
+                "### 1. Cấu trúc chuẩn mực 1 trang (1-Page ATS Standard)\n"
+                "- **Thông tin cá nhân**: Họ tên, Email chuyên nghiệp, SĐT, Link LinkedIn / GitHub / Portfolio.\n"
+                "- **Mục tiêu nghề nghiệp**: Ngắn gọn 2-3 câu, nêu rõ giá trị bạn mang lại cho doanh nghiệp.\n"
+                "- **Kỹ năng chuyên môn**: Chia nhóm Kỹ năng Cốt lõi (Core), Kỹ năng Nâng cao (Tools/Frameworks) và Ngoại ngữ.\n"
+                "- **Dự án thực tế (Quan trọng nhất)**: Trình bày từ 2-3 dự án tiêu biểu nhất.\n"
+                "- **Học vấn & Chứng chỉ**: Tên trường, chuyên ngành, GPA (nếu >= 3.0), các chứng chỉ quốc tế.\n\n"
+                "### 2. Công thức viết thành tích STAR\n"
+                "Thay vì viết: *'Làm việc nhóm xây dựng website bán hàng'*, hãy viết:\n"
+                "> *'Thiết kế RESTful API bằng FastAPI & PostgreSQL cho sàn TMĐT với 500 users thử nghiệm, giảm thời gian phản hồi còn 120ms.'*\n\n"
+                "### 3. Đặt tên file chuẩn gửi nhà tuyển dụng\n"
+                "- Chuẩn: `CV_[Vị_Trí]_[Họ_Và_Tên].pdf` (Ví dụ: `CV_Backend_Intern_NguyenVanA.pdf`).\n\n"
+                "👉 Bạn có thể dán nội dung CV vào tính năng **Tối ưu CV** trên thanh Menu để AI chấm điểm và sửa từng gạch đầu dòng nhé!"
+            )
+            suggestions = [
+                "Ví dụ câu viết theo công thức STAR",
+                "CV sinh viên chưa có kinh nghiệm nên viết gì?",
+                "Chuyển đến công cụ Tối ưu CV"
+            ]
+
+        elif is_interview:
+            intent = "interview_prep"
+            reply = (
+                f"Chào **{student_name}**, phỏng vấn là cơ hội để bạn chứng minh sự phù hợp về văn hóa và năng lực giải quyết vấn đề. Dưới đây là chiến lược cho các câu hỏi kinh điển:\n\n"
+                "### 1. 'Hãy giới thiệu bản thân trong 2 phút?'\n"
+                "- **Công thức Hiện tại - Quá khứ - Tương lai**: Nêu bạn là ai (chuyên ngành, thế mạnh hiện tại) ➔ 1 thành tựu nổi bật bạn tự hào nhất ➔ Lý do vì sao bạn có mặt ở buổi phỏng vấn hôm nay.\n\n"
+                "### 2. 'Điểm yếu lớn nhất của bạn là gì?'\n"
+                "- **Cách trả lời điểm 10**: Chọn một điểm yếu THẬT nhưng không phải kỹ năng cốt lõi bắt buộc, và nêu ngay **biện pháp cụ thể bạn đang khắc phục**.\n"
+                "> *Ví dụ*: 'Trước đây em đôi khi quá tập trung vào tiểu tiết khiến tiến độ bị chậm lại. Sau đó em đã áp dụng phương pháp Pomodoro và đặt Deadline từng task trên Trello, hiện tại em luôn hoàn thành công việc đúng tiến độ.'\n\n"
+                "### 3. 'Tại sao bạn ứng tuyển vào công ty chúng tôi?'\n"
+                "- Đừng nói chung chung là 'công ty lớn'. Hãy nhắc đến **sản phẩm cụ thể**, văn hóa hoặc sứ mệnh của công ty mà bạn đã tìm hiểu kỹ.\n\n"
+                "👉 Hãy vào tab **Phỏng vấn thử** để luyện tập trực tiếp với AI và nhận phản hồi chấm điểm theo thời gian thực!"
+            )
+            suggestions = [
+                "Luyện phỏng vấn thử với AI ngay",
+                "Cách đặt câu hỏi ngược lại cho nhà tuyển dụng",
+                "Cách trả lời khi gặp câu hỏi kỹ thuật không biết"
+            ]
+
+        elif is_roadmap:
+            intent = "roadmap_inquiry"
+            matched_role = "Backend Developer"
+            for r in ROLE_SKILL_TAXONOMY.keys():
+                if any(k in msg_lower for k in r.lower().split()):
+                    matched_role = r
+                    break
+
+            r_data = ROLE_SKILL_TAXONOMY.get(matched_role, ROLE_SKILL_TAXONOMY["Backend Developer"])
+            reply = (
+                f"Chào **{student_name}**, đây là Lộ trình 4 giai đoạn làm chủ vị trí **{matched_role}**:\n\n"
+                f"### 🎯 Giai đoạn 1: Nền tảng cốt lõi (Tháng 1)\n"
+                f"- **Kỹ năng cần học**: {', '.join(r_data['core'][:4])}\n"
+                f"- **Mục tiêu**: Nắm vững cú pháp, nguyên lý hoạt động và giải thuật cơ bản.\n\n"
+                f"### 🚀 Giai đoạn 2: Xây dựng Dự án Capstone (Tháng 2)\n"
+                f"- **Kỹ năng thực chiến**: {', '.join(r_data['advanced'][:3])}\n"
+                f"- **Sản phẩm đầu ra**: Xây dựng 1 ứng dụng hoàn chỉnh có Database, API và xử lý dữ liệu thực tế.\n\n"
+                f"### 🛡️ Giai đoạn 3: Tối ưu & Mở rộng (Tháng 3)\n"
+                f"- **Kỹ năng**: Clean Code, Kiểm thử tự động (Unit Test), Tối ưu hiệu năng và triển khai Cloud.\n\n"
+                f"### 🏆 Giai đoạn 4: Hoàn thiện Profile & Ứng tuyển (Tháng 4)\n"
+                f"- **Hành động**: Tối ưu CV chuẩn ATS, đưa code lên GitHub có README đẹp mắt, luyện Mock Interview.\n\n"
+                f"👉 Bạn có thể xem lộ trình tương tác trực quan tại tab **Lộ trình kỹ năng** trên hệ thống!"
+            )
+            suggestions = [
+                f"Tìm việc cho vị trí {matched_role}",
+                "Các chứng chỉ quốc tế nên thi",
+                "Phỏng vấn thử cho vị trí này"
+            ]
+
+        elif is_guidance:
+            intent = "career_guidance"
+            reply = (
+                f"Chào **{student_name}**, việc băn khoăn về định hướng nghề nghiệp là điều rất bình thường ở thời sinh viên! Hãy cùng AI phân tích theo 3 nhóm định hướng chính:\n\n"
+                "### 1. Nếu bạn yêu thích Logic, Kỹ thuật & Công nghệ:\n"
+                "- **Trí tuệ nhân tạo (AI/ML)**: Phù hợp bạn giỏi toán, thống kê, thích nghiên cứu thuật toán.\n"
+                "- **Kỹ sư Phần mềm (Backend/Frontend)**: Cơ hội việc làm lớn, tính ứng dụng thực tiễn cao.\n"
+                "- **An toàn thông tin / Cloud**: Nhu cầu tuyển dụng ổn định, bảo mật hạ tầng số.\n\n"
+                "### 2. Nếu bạn thích Dữ liệu, Kinh doanh & Chiến lược:\n"
+                "- **Data Analyst / BI**: Cầu nối giữa kỹ thuật và kinh doanh, tư duy bằng số liệu.\n"
+                "- **Phân tích Tài chính & Đầu tư**: Định giá, thẩm định dự án, làm việc tại ngân hàng/chứng khoán.\n"
+                "- **Digital Marketing & E-commerce**: Năng động, sáng tạo nội dung, tối ưu chiến dịch quảng cáo.\n\n"
+                "### 3. Nếu bạn thích Con người, Giao tiếp & Tổ chức:\n"
+                "- **Quản trị Nhân sự (HR / Headhunter)**: Thu hút nhân tài, xây dựng văn hóa doanh nghiệp.\n"
+                "- **Logistics & Chuỗi cung ứng**: Điều phối dòng chảy hàng hóa quốc tế, giao thương toàn cầu.\n"
+                "- **Quản lý Khách sạn / Pháp chế**: Môi trường dịch vụ chuyên nghiệp, tuân thủ pháp lý.\n\n"
+                "> 💬 **Hãy chia sẻ thêm với tôi**: Bạn học chuyên ngành gì và cảm thấy hứng thú nhất khi làm công việc như thế nào? Tôi sẽ gợi ý nghề nghiệp chính xác nhất cho bạn!"
+            )
+            suggestions = [
+                "Em học CNTT nhưng không giỏi lập trình thì làm gì?",
+                "Nhu cầu tuyển dụng ngành Logistics hiện nay",
+                "So sánh nghề Data Analyst và AI Engineer"
+            ]
+
+        else:
+            # General polite helpful response
+            reply = (
+                f"Xin chào **{student_name}**! Tôi là **CareerBridge AI Advisor** — Trợ lý ảo Hướng nghiệp và Phát triển Nghề nghiệp thông minh.\n\n"
+                "Tôi có thể hỗ trợ bạn mọi khía cạnh trong hành trình tìm việc và xây dựng sự nghiệp:\n\n"
+                "1. 🔍 **Gợi ý việc làm**: Tìm các vị trí Thực tập / Fresher đa ngành nghề từ các tập đoàn uy tín.\n"
+                "2. 📄 **Tối ưu CV & Portfolio**: Hướng dẫn viết hồ sơ chuẩn ATS, công thức lượng hóa STAR.\n"
+                "3. 🎙️ **Mô phỏng Phỏng vấn**: Hướng dẫn trả lời các câu hỏi tình huống, kỹ thuật và hành vi.\n"
+                "4. 🗺️ **Lộ trình Kỹ năng**: Phân tích khoảng cách năng lực và lộ trình 4 giai đoạn thăng tiến.\n"
+                "5. 📊 **Xu hướng Thị trường**: Tra cứu mức lương và dự báo nhu cầu nhân lực 16 ngành nghề.\n\n"
+                "Bạn cần tôi hỗ trợ điều gì hôm nay?"
+            )
+            suggestions = [
+                "Gợi ý việc làm thực tập mới nhất",
+                "Tra cứu mức lương Fresher các ngành",
+                "Làm sao để viết CV vượt qua vòng lọc ATS?",
+                "Tư vấn định hướng nghề nghiệp cho em"
+            ]
+
+    # Persist message turn to SQLite database
+    try:
+        with db_session() as conn:
+            cursor = conn.cursor()
+            user_msg_id = f"msg_{uuid.uuid4().hex[:12]}"
+            bot_msg_id = f"msg_{uuid.uuid4().hex[:12]}"
+
+            cursor.execute("""
+                INSERT INTO chat_messages (id, session_id, user_id, sender, message, metadata, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            """, (user_msg_id, session_id, user_id, "user", msg_clean, json.dumps(context), now_iso))
+
+            cursor.execute("""
+                INSERT INTO chat_messages (id, session_id, user_id, sender, message, metadata, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+            """, (bot_msg_id, session_id, user_id, "assistant", reply, json.dumps({
+                "intent": intent,
+                "suggestions": suggestions,
+                "suggested_jobs_count": len(suggested_jobs)
+            }), now_iso))
+    except Exception as e:
+        print(f"Chat persistence error: {e}")
+
+    return {
+        "reply": reply,
+        "intent": intent,
+        "session_id": session_id,
+        "suggestions": suggestions,
+        "suggested_jobs": suggested_jobs if suggested_jobs else None,
+        "created_at": now_iso
     }

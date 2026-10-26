@@ -69,3 +69,48 @@ body {
   border-bottom: 2px solid #2563eb;
   font-weight: 600;
 }
+
+/* Chatbot Styles */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.chat-bubble {
+  position: relative;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.chat-bubble p {
+  margin-bottom: 0.5rem;
+}
+
+.chat-bubble p:last-child {
+  margin-bottom: 0;
+}
+
+.chat-bubble ul, .chat-bubble ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.chat-bubble li {
+  margin-bottom: 0.25rem;
+}
+
+.chat-bubble strong {
+  font-weight: 700;
+}
+
+.chat-bubble code {
+  background-color: rgba(0, 0, 0, 0.06);
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: monospace;
+  font-size: 0.85em;
+}
+

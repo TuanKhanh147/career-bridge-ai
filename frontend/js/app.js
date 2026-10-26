@@ -72,6 +72,7 @@ async function initApp() {
 
   updateNavbar();
   navigateTab(activeTab);
+  initChatbotWidget();
 }
 
 // Quick Role Switcher
@@ -139,6 +140,7 @@ function updateNavbar() {
   if (!currentUser || currentUser.role === 'student') {
     links = [
       { id: 'jobs', label: '💼 Việc làm & Ghép nối AI' },
+      { id: 'chatbot', label: '🤖 Cố vấn AI 24/7' },
       { id: 'cv', label: '📄 Tối ưu CV & ATS' },
       { id: 'interview', label: '🎙️ Phỏng vấn thử AI' },
       { id: 'roadmap', label: '🗺️ Lộ trình kỹ năng' },
@@ -228,6 +230,9 @@ function navigateTab(tabId) {
     case 'jobs':
       renderJobsView(contentArea);
       break;
+    case 'chatbot':
+      renderChatbotView(contentArea);
+      break;
     case 'cv':
       renderCVReviewView(contentArea);
       break;
@@ -302,7 +307,7 @@ async function renderJobsView(container) {
           </select>
 
           <select id="filter-industry" onchange="handleJobFilter()" class="text-xs sm:text-sm bg-slate-50 border border-slate-200 rounded-xl px-3 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500">
-            <option value="">Tất cả ngành nghề</option>
+            <option value="">Tất cả ngành nghề (16 lĩnh vực)</option>
             <option value="Công nghệ thông tin & Phần mềm">CNTT & Phần mềm</option>
             <option value="Trí tuệ nhân tạo & Dữ liệu">Trí tuệ nhân tạo & Dữ liệu</option>
             <option value="Digital Marketing & Truyền thông">Digital Marketing & Truyền thông</option>
@@ -313,6 +318,12 @@ async function renderJobsView(container) {
             <option value="Thiết kế Sản phẩm & UI/UX">Thiết kế Sản phẩm & UI/UX</option>
             <option value="Kỹ thuật & Tự động hóa">Kỹ thuật & Tự động hóa</option>
             <option value="An toàn thông tin & Mạng máy tính">An toàn thông tin & Mạng</option>
+            <option value="Thương mại điện tử & Bán lẻ số">Thương mại điện tử & E-Commerce</option>
+            <option value="Y tế, Dược phẩm & Công nghệ Sinh học">Y tế, Dược phẩm & CNSH</option>
+            <option value="Khách sạn, Du lịch & Dịch vụ F&B">Khách sạn & Du lịch (Hospitality)</option>
+            <option value="Pháp lý doanh nghiệp & Luật kinh tế">Pháp lý doanh nghiệp & Luật</option>
+            <option value="Xây dựng, Kiến trúc & Mô hình BIM">Xây dựng & Mô hình BIM</option>
+            <option value="Giáo dục, Đào tạo trực tuyến & EdTech">Giáo dục trực tuyến & EdTech</option>
           </select>
 
           <button onclick="handleJobFilter()" class="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-sm font-semibold shadow-sm transition">
@@ -651,6 +662,12 @@ async function renderCVReviewView(container) {
               <option value="Supply Chain & Quản trị Chuỗi Cung ứng (Logistics)">Quản trị Chuỗi Cung ứng & Logistics</option>
               <option value="UI/UX & Product Designer">Thiết kế Sản phẩm & Trải nghiệm (UI/UX Designer)</option>
               <option value="Kỹ sư Tự động hóa & Cơ điện tử (Automation & Robotics)">Kỹ sư Tự động hóa & Cơ điện tử</option>
+              <option value="E-Commerce & Digital Retail Specialist">Chuyên viên Vận hành Sàn & E-Commerce Specialist</option>
+              <option value="Healthcare & Pharma Specialist">Dược sĩ Lâm sàng & Quản lý Sản phẩm Y Dược</option>
+              <option value="Hospitality & Tourism Manager">Quản trị Vận hành Khách sạn & Du lịch</option>
+              <option value="Corporate Legal & Compliance Officer">Chuyên viên Pháp chế Doanh nghiệp (Corporate Legal)</option>
+              <option value="Civil & BIM Engineer">Kỹ sư Xây dựng & Kỹ sư Mô hình BIM</option>
+              <option value="EdTech & Instructional Designer">Chuyên viên Thiết kế Khóa học & EdTech Specialist</option>
             </select>
           </div>
 
@@ -876,6 +893,12 @@ function renderMockInterviewView(container) {
               <option value="Supply Chain & Quản trị Chuỗi Cung ứng (Logistics)">Quản trị Chuỗi Cung ứng & Logistics</option>
               <option value="UI/UX & Product Designer">Thiết kế Sản phẩm & Trải nghiệm (UI/UX Designer)</option>
               <option value="Kỹ sư Tự động hóa & Cơ điện tử (Automation & Robotics)">Kỹ sư Tự động hóa & Cơ điện tử</option>
+              <option value="E-Commerce & Digital Retail Specialist">Chuyên viên Vận hành Sàn & E-Commerce Specialist</option>
+              <option value="Healthcare & Pharma Specialist">Dược sĩ Lâm sàng & Quản lý Sản phẩm Y Dược</option>
+              <option value="Hospitality & Tourism Manager">Quản trị Vận hành Khách sạn & Du lịch</option>
+              <option value="Corporate Legal & Compliance Officer">Chuyên viên Pháp chế Doanh nghiệp (Corporate Legal)</option>
+              <option value="Civil & BIM Engineer">Kỹ sư Xây dựng & Kỹ sư Mô hình BIM</option>
+              <option value="EdTech & Instructional Designer">Chuyên viên Thiết kế Khóa học & EdTech Specialist</option>
             </select>
           </div>
 
@@ -1194,6 +1217,12 @@ function renderRoadmapView(container) {
             <option value="Supply Chain & Quản trị Chuỗi Cung ứng (Logistics)">Quản trị Chuỗi Cung ứng & Logistics</option>
             <option value="UI/UX & Product Designer">Thiết kế Sản phẩm & Trải nghiệm (UI/UX Designer)</option>
             <option value="Kỹ sư Tự động hóa & Cơ điện tử (Automation & Robotics)">Kỹ sư Tự động hóa & Cơ điện tử</option>
+            <option value="E-Commerce & Digital Retail Specialist">Chuyên viên Vận hành Sàn & E-Commerce Specialist</option>
+            <option value="Healthcare & Pharma Specialist">Dược sĩ Lâm sàng & Quản lý Sản phẩm Y Dược</option>
+            <option value="Hospitality & Tourism Manager">Quản trị Vận hành Khách sạn & Du lịch</option>
+            <option value="Corporate Legal & Compliance Officer">Chuyên viên Pháp chế Doanh nghiệp (Corporate Legal)</option>
+            <option value="Civil & BIM Engineer">Kỹ sư Xây dựng & Kỹ sư Mô hình BIM</option>
+            <option value="EdTech & Instructional Designer">Chuyên viên Thiết kế Khóa học & EdTech Specialist</option>
           </select>
         </div>
 
@@ -1577,6 +1606,12 @@ function renderRecruiterPostView(container) {
           <option value="Thiết kế Sản phẩm & UI/UX">Thiết kế Sản phẩm & UI/UX</option>
           <option value="Kỹ thuật & Tự động hóa">Kỹ thuật & Tự động hóa</option>
           <option value="An toàn thông tin & Mạng máy tính">An toàn thông tin & Mạng máy tính</option>
+          <option value="Thương mại điện tử & Bán lẻ số">Thương mại điện tử & Bán lẻ số</option>
+          <option value="Y tế, Dược phẩm & Công nghệ Sinh học">Y tế, Dược phẩm & Công nghệ Sinh học</option>
+          <option value="Khách sạn, Du lịch & Dịch vụ F&B">Khách sạn, Du lịch & Dịch vụ F&B</option>
+          <option value="Pháp lý doanh nghiệp & Luật kinh tế">Pháp lý doanh nghiệp & Luật kinh tế</option>
+          <option value="Xây dựng, Kiến trúc & Mô hình BIM">Xây dựng, Kiến trúc & Mô hình BIM</option>
+          <option value="Giáo dục, Đào tạo trực tuyến & EdTech">Giáo dục, Đào tạo trực tuyến & EdTech</option>
         </select>
       </div>
 
@@ -1983,7 +2018,9 @@ function updateSkillChipsUI() {
     'Google Ads', 'Meta Ads', 'SEO/SEM', 'Financial Modeling', 'Corporate Finance',
     'MISA/FAST', 'Hạch toán Kế toán', 'Tuyển dụng & C&B', 'Luật Lao động',
     'Incoterms 2020', 'Quản lý Kho bãi', 'Lập trình PLC', 'SCADA & HMI',
-    'Cybersecurity', 'Excel Advanced'
+    'Cybersecurity', 'Excel Advanced', 'Quản trị Shopee/TikTok Shop', 'Kinh doanh Dược phẩm',
+    'GCP/GMP Y tế', 'Quản trị Khách sạn & PMS', 'Pháp chế Hợp đồng & Doanh nghiệp',
+    'AutoCAD & Revit BIM', 'Soạn thảo E-Learning & SCORM'
   ];
 
   container.innerHTML = allSkills.map(s => {
@@ -2019,7 +2056,10 @@ function updateRoleChipsUI() {
     'Digital Marketing & Performance Media', 'Financial Analyst & Phân tích Tài chính',
     'Kế toán & Kiểm toán (Auditing & Accounting)', 'HR & Quản trị Nhân sự (Talent Acquisition)',
     'Supply Chain & Quản trị Chuỗi Cung ứng (Logistics)', 'UI/UX & Product Designer',
-    'Kỹ sư Tự động hóa & Cơ điện tử (Automation & Robotics)'
+    'Kỹ sư Tự động hóa & Cơ điện tử (Automation & Robotics)',
+    'E-Commerce & Digital Retail Specialist', 'Healthcare & Pharma Specialist',
+    'Hospitality & Tourism Manager', 'Corporate Legal & Compliance Officer',
+    'Civil & BIM Engineer', 'EdTech & Instructional Designer'
   ];
 
   container.innerHTML = allRoles.map(r => {
@@ -2147,6 +2187,12 @@ async function openAuthModal(defaultMode = 'register-student') {
                 <option value="Thiết kế Đồ họa & UI/UX">Thiết kế Đồ họa & UI/UX</option>
                 <option value="Kỹ thuật Cơ điện tử & Tự động hóa">Kỹ thuật Cơ điện tử & Tự động hóa</option>
                 <option value="Quản trị Kinh doanh & Phân tích Nghiệp vụ">Quản trị Kinh doanh & BA</option>
+                <option value="Thương mại Điện tử & Kinh doanh Số">Thương mại Điện tử & Kinh doanh Số</option>
+                <option value="Dược học & Công nghệ Sinh học">Dược học & Công nghệ Sinh học</option>
+                <option value="Quản trị Khách sạn & Du lịch">Quản trị Khách sạn & Du lịch</option>
+                <option value="Luật Kinh tế & Pháp chế Doanh nghiệp">Luật Kinh tế & Pháp chế Doanh nghiệp</option>
+                <option value="Kỹ thuật Xây dựng & Quản lý Dự án (BIM)">Kỹ thuật Xây dựng & Mô hình BIM</option>
+                <option value="Công nghệ Giáo dục & Sư phạm số (EdTech)">Công nghệ Giáo dục & Sư phạm số (EdTech)</option>
               </select>
             </div>
           </div>
@@ -2406,6 +2452,348 @@ async function submitLogin() {
   }
 }
 
+// ==========================================
+// 8. AI CAREER ADVISOR CHATBOT LOGIC
+// ==========================================
+let currentChatSessionId = localStorage.getItem('cb_chat_session_id');
+if (!currentChatSessionId) {
+  currentChatSessionId = 'sess_' + Date.now().toString(36) + '_' + Math.random().toString(36).substring(2, 8);
+  localStorage.setItem('cb_chat_session_id', currentChatSessionId);
+}
+
+function formatChatText(text) {
+  if (!text) return '';
+  let formatted = text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+
+  // Markdown bold
+  formatted = formatted.replace(/\*\*(.*?)\*\*/g, '<strong class="font-bold text-slate-900">$1</strong>');
+
+  // Lists
+  const lines = formatted.split('\n');
+  let inList = false;
+  let outLines = [];
+
+  for (let line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith('- ') || trimmed.startsWith('* ')) {
+      if (!inList) {
+        outLines.push('<ul class="list-disc list-inside space-y-1 my-1">');
+        inList = true;
+      }
+      outLines.push(`<li>${trimmed.substring(2)}</li>`);
+    } else {
+      if (inList) {
+        outLines.push('</ul>');
+        inList = false;
+      }
+      if (trimmed === '') {
+        outLines.push('<div class="h-2"></div>');
+      } else {
+        outLines.push(`<p class="mb-1">${line}</p>`);
+      }
+    }
+  }
+  if (inList) outLines.push('</ul>');
+  return outLines.join('');
+}
+
+function toggleChatbotDrawer(forceState) {
+  const drawer = document.getElementById('chatbot-drawer');
+  if (!drawer) return;
+  const isCurrentlyHidden = drawer.classList.contains('hidden');
+  const targetHidden = forceState !== undefined ? !forceState : !isCurrentlyHidden;
+
+  if (targetHidden) {
+    drawer.classList.add('hidden');
+  } else {
+    drawer.classList.remove('hidden');
+    const input = document.getElementById('chatbot-input');
+    if (input) setTimeout(() => input.focus(), 150);
+  }
+}
+
+function appendChatMessageUI(sender, text, meta = {}, containerId = 'chatbot-messages') {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const isUser = sender === 'user';
+  const msgWrapper = document.createElement('div');
+  msgWrapper.className = `flex items-end space-x-2 ${isUser ? 'justify-end' : 'justify-start'}`;
+
+  const timeStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' });
+
+  if (isUser) {
+    msgWrapper.innerHTML = `
+      <div class="max-w-[85%] bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-3 rounded-2xl rounded-br-none shadow-sm text-xs sm:text-sm">
+        <div class="chat-bubble font-normal">${formatChatText(text)}</div>
+        <div class="text-[10px] text-blue-100 text-right mt-1">${timeStr}</div>
+      </div>
+    `;
+  } else {
+    let jobsHtml = '';
+    if (meta.jobs && meta.jobs.length > 0) {
+      jobsHtml = `
+        <div class="mt-2.5 pt-2.5 border-t border-slate-200 space-y-2">
+          <div class="text-[11px] font-bold text-slate-700 flex items-center space-x-1">
+            <span>💼 Việc làm gợi ý phù hợp (${meta.jobs.length}):</span>
+          </div>
+          <div class="space-y-1.5">
+            ${meta.jobs.map(j => `
+              <div class="p-2 bg-slate-50 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-xl transition flex items-center justify-between gap-2">
+                <div class="min-w-0">
+                  <div class="font-bold text-xs text-slate-800 truncate">${j.title}</div>
+                  <div class="text-[10px] text-slate-500 truncate">${j.company || 'Doanh nghiệp'} • ${j.location || 'Việt Nam'}</div>
+                  <div class="text-[10px] text-emerald-600 font-semibold">${j.salary_range || 'Thương lượng'}</div>
+                </div>
+                <button onclick="openJobDetailModal(${j.id})" class="px-2.5 py-1 bg-blue-600 hover:bg-blue-700 text-white text-[11px] font-semibold rounded-lg shrink-0 transition shadow-sm">
+                  Chi tiết
+                </button>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    }
+
+    msgWrapper.innerHTML = `
+      <div class="w-7 h-7 rounded-xl bg-gradient-to-br from-blue-600 to-purple-600 text-white flex items-center justify-center text-xs shrink-0 shadow-sm">
+        🤖
+      </div>
+      <div class="max-w-[85%] bg-white border border-slate-200/90 text-slate-800 p-3 rounded-2xl rounded-bl-none shadow-sm text-xs sm:text-sm">
+        <div class="chat-bubble">${formatChatText(text)}</div>
+        ${jobsHtml}
+        <div class="text-[10px] text-slate-400 mt-1 flex items-center justify-between">
+          <span>AI Advisor</span>
+          <span>${timeStr}</span>
+        </div>
+      </div>
+    `;
+  }
+
+  container.appendChild(msgWrapper);
+  container.scrollTop = container.scrollHeight;
+}
+
+async function initChatbotWidget() {
+  const messagesBox = document.getElementById('chatbot-messages');
+  if (!messagesBox) return;
+
+  if (messagesBox.children.length === 0) {
+    const studentName = currentUser?.full_name ? ` ${currentUser.full_name}` : '';
+    const welcomeText = `Xin chào${studentName}! 👋 Mình là **CareerBridge AI Advisor** — Cố vấn định hướng nghề nghiệp và việc làm thông minh.\n\nMình có thể hỗ trợ bạn:\n- 💼 **Tìm kiếm việc làm & thực tập** theo chuyên ngành và kỹ năng (16 ngành nghề)\n- 💰 **Tra cứu mức lương** và đãi ngộ thị trường thực tế\n- 📝 **Tư vấn viết CV chuẩn ATS** và sửa điểm yếu\n- 🎙️ **Mẹo phỏng vấn** & câu hỏi tuyển dụng thực tế\n- 🗺️ **Xây dựng lộ trình kỹ năng** bứt phá từ số 0.\n\nBạn đang quan tâm đến mục tiêu nghề nghiệp nào hôm nay?`;
+    appendChatMessageUI('ai', welcomeText, {}, 'chatbot-messages');
+  }
+
+  try {
+    const suggestions = await API.getChatSuggestions();
+    const chipsContainer = document.getElementById('chatbot-chips-bar');
+    if (chipsContainer && suggestions && suggestions.length > 0) {
+      chipsContainer.innerHTML = suggestions.map(s => `
+        <button type="button" onclick="sendQuickChatMessage('${s.replace(/'/g, "\\'")}')" class="shrink-0 px-2.5 py-1 text-[11px] font-medium bg-slate-100 hover:bg-blue-50 text-slate-700 hover:text-blue-600 rounded-full border border-slate-200 transition">
+          ${s}
+        </button>
+      `).join('');
+    }
+  } catch (e) {
+    console.warn('Failed to load chat suggestions:', e);
+  }
+}
+
+async function sendChatMessageToAdvisor(msgText, containerId = 'chatbot-messages', inputId = 'chatbot-input', typingId = 'chatbot-typing') {
+  if (!msgText || !msgText.trim()) return;
+  const cleanText = msgText.trim();
+
+  const inputEl = document.getElementById(inputId);
+  if (inputEl) inputEl.value = '';
+
+  const typingEl = document.getElementById(typingId);
+  if (typingEl) typingEl.classList.remove('hidden');
+
+  appendChatMessageUI('user', cleanText, {}, containerId);
+
+  try {
+    const res = await API.sendChatMessage(cleanText, currentChatSessionId);
+    if (typingEl) typingEl.classList.add('hidden');
+    appendChatMessageUI('ai', res.reply, { jobs: res.matched_jobs, intent: res.intent }, containerId);
+  } catch (err) {
+    if (typingEl) typingEl.classList.add('hidden');
+    appendChatMessageUI('ai', 'Rất tiếc, đã có lỗi kết nối với máy chủ AI: ' + (err.message || 'Vui lòng thử lại sau.'), {}, containerId);
+  }
+}
+
+function sendQuickChatMessage(text) {
+  sendChatMessageToAdvisor(text, 'chatbot-messages', 'chatbot-input', 'chatbot-typing');
+}
+
+function handleChatbotSubmit(event) {
+  event.preventDefault();
+  const input = document.getElementById('chatbot-input');
+  if (!input) return;
+  sendChatMessageToAdvisor(input.value, 'chatbot-messages', 'chatbot-input', 'chatbot-typing');
+}
+
+async function clearChatbotHistory(containerId = 'chatbot-messages') {
+  try {
+    await API.clearChatHistory(currentChatSessionId);
+    const box = document.getElementById(containerId);
+    if (box) {
+      box.innerHTML = '';
+      if (containerId === 'chatbot-messages') {
+        initChatbotWidget();
+      } else {
+        const studentName = currentUser?.full_name ? ` **${currentUser.full_name}**` : '';
+        const welcome = `Xin chào${studentName}! 👋 Mình là **CareerBridge AI Advisor**.\n\nHệ thống hiện quản lý dữ liệu **16 nhóm ngành nghề** từ Công nghệ, Kinh tế, Y Dược, Khách sạn, Pháp lý đến Xây dựng và Giáo dục.\n\nNhập câu hỏi bên dưới hoặc chọn gợi ý nhanh phía trên để bắt đầu ngay!`;
+        appendChatMessageUI('ai', welcome, {}, containerId);
+      }
+    }
+    showToast('Đã làm mới cuộc hội thoại với AI Advisor!', 'info');
+  } catch (err) {
+    showToast('Không thể xóa lịch sử chat: ' + err.message, 'error');
+  }
+}
+
+// Full page Chatbot View
+function renderChatbotView(container) {
+  container.innerHTML = `
+    <div class="space-y-6">
+      <!-- Chatbot Page Header -->
+      <div class="bg-gradient-to-r from-blue-700 via-indigo-700 to-purple-800 p-6 sm:p-8 rounded-3xl text-white shadow-lg relative overflow-hidden">
+        <div class="relative z-10 max-w-3xl">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/20 text-white backdrop-blur-md mb-3">
+            🤖 AI Career Advisor • Trực tuyến 24/7
+          </span>
+          <h1 class="text-2xl sm:text-3xl font-extrabold tracking-tight">
+            Cố vấn Nghề nghiệp & Việc làm AI Thông minh
+          </h1>
+          <p class="mt-2 text-blue-100 text-xs sm:text-sm leading-relaxed">
+            Hỏi đáp trực tiếp với trợ lý AI am hiểu 16 nhóm ngành nghề: gợi ý việc làm phù hợp hồ sơ, tra cứu dải lương thực tế, review CV chuẩn ATS, phân tích tiêu chí tuyển dụng và chuẩn bị phỏng vấn.
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Category Prompts -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+        <button onclick="sendPageQuickPrompt('Tìm giúp tôi các việc làm thực tập sinh IT và AI lương tốt')" class="p-3 bg-white hover:bg-blue-50 border border-slate-200 hover:border-blue-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">💼</div>
+          <div class="font-bold text-xs text-slate-800">Tìm việc làm AI</div>
+          <div class="text-[10px] text-slate-500">Gợi ý tin tuyển dụng</div>
+        </button>
+
+        <button onclick="sendPageQuickPrompt('Mức lương Fresher ngành Dữ liệu & AI hiện nay khoảng bao nhiêu?')" class="p-3 bg-white hover:bg-emerald-50 border border-slate-200 hover:border-emerald-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">💰</div>
+          <div class="font-bold text-xs text-slate-800">Tra cứu Lương</div>
+          <div class="text-[10px] text-slate-500">Thị trường 16 ngành</div>
+        </button>
+
+        <button onclick="sendPageQuickPrompt('Làm sao để CV sinh viên vượt qua bộ lọc ATS của doanh nghiệp lớn?')" class="p-3 bg-white hover:bg-purple-50 border border-slate-200 hover:border-purple-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">📝</div>
+          <div class="font-bold text-xs text-slate-800">Tối ưu hóa CV</div>
+          <div class="text-[10px] text-slate-500">Chuẩn ATS & Kinh nghiệm</div>
+        </button>
+
+        <button onclick="sendPageQuickPrompt('Nhà tuyển dụng thường hỏi những câu gì ở vòng phỏng vấn hành vi HR?')" class="p-3 bg-white hover:bg-amber-50 border border-slate-200 hover:border-amber-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">🎙️</div>
+          <div class="font-bold text-xs text-slate-800">Mẹo Phỏng vấn</div>
+          <div class="text-[10px] text-slate-500">STAR method & Kỹ năng</div>
+        </button>
+
+        <button onclick="sendPageQuickPrompt('Tôi muốn chuyển ngành sang E-commerce hoặc Logistics thì cần học gì?')" class="p-3 bg-white hover:bg-rose-50 border border-slate-200 hover:border-rose-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">🗺️</div>
+          <div class="font-bold text-xs text-slate-800">Lộ trình học tập</div>
+          <div class="text-[10px] text-slate-500">Học từ số 0 & Chuyển ngành</div>
+        </button>
+
+        <button onclick="sendPageQuickPrompt('Nhu cầu tuyển dụng các ngành Y Dược, Xây dựng BIM và Pháp lý hiện ra sao?')" class="p-3 bg-white hover:bg-indigo-50 border border-slate-200 hover:border-indigo-300 rounded-2xl text-left transition shadow-sm group">
+          <div class="text-xl mb-1 group-hover:scale-110 transition-transform">📈</div>
+          <div class="font-bold text-xs text-slate-800">Xu hướng ngành mới</div>
+          <div class="text-[10px] text-slate-500">Cơ hội việc làm 2025-2026</div>
+        </button>
+      </div>
+
+      <!-- Main Chat Area -->
+      <div class="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden flex flex-col h-[650px]">
+        <!-- Top bar -->
+        <div class="px-6 py-4 bg-slate-50 border-b border-slate-200 flex items-center justify-between">
+          <div class="flex items-center space-x-3">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 text-white flex items-center justify-center text-xl shadow-md">
+              🤖
+            </div>
+            <div>
+              <div class="font-bold text-sm text-slate-900">CareerBridge AI Advisor • Phòng Cố Vấn Trực Tuyến</div>
+              <div class="text-xs text-emerald-600 font-medium flex items-center space-x-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span>Hỗ trợ 16 nhóm ngành nghề • Sẵn sàng giải đáp tức thì</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex items-center space-x-2">
+            <button onclick="clearChatbotHistory('page-chatbot-messages')" class="px-3 py-1.5 text-xs font-semibold text-slate-600 hover:text-rose-600 hover:bg-slate-100 rounded-xl transition flex items-center space-x-1">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+              <span>Làm mới đoạn chat</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat messages -->
+        <div id="page-chatbot-messages" class="flex-1 p-6 overflow-y-auto space-y-4 bg-slate-50/50 text-sm">
+          <!-- Populated below -->
+        </div>
+
+        <!-- Typing status -->
+        <div id="page-chatbot-typing" class="hidden px-6 py-2.5 bg-slate-50 border-t border-slate-100 flex items-center space-x-2 text-xs text-slate-500">
+          <div class="flex space-x-1">
+            <div class="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+            <div class="w-2 h-2 bg-indigo-500 rounded-full animate-bounce [animation-delay:0.2s]"></div>
+            <div class="w-2 h-2 bg-purple-500 rounded-full animate-bounce [animation-delay:0.4s]"></div>
+          </div>
+          <span>AI đang phân tích yêu cầu nghề nghiệp của bạn...</span>
+        </div>
+
+        <!-- Input bar -->
+        <div class="p-4 bg-white border-t border-slate-200">
+          <form onsubmit="handlePageChatSubmit(event)" class="flex items-center space-x-3">
+            <input
+              type="text"
+              id="page-chatbot-input"
+              placeholder="Nhập câu hỏi của bạn (ví dụ: 'Tìm việc làm Marketing tại TP.HCM', 'Lương ngành AI', 'Cách viết CV ấn tượng')..."
+              class="flex-1 text-sm px-4 py-3 bg-slate-100 border border-transparent rounded-2xl focus:bg-white focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition"
+            />
+            <button
+              type="submit"
+              class="px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-sm rounded-2xl shadow-md transition flex items-center space-x-1.5 shrink-0"
+            >
+              <span>Gửi câu hỏi</span>
+              <svg class="w-4 h-4 transform rotate-90" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"></path></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  `;
+
+  const pageMessagesBox = document.getElementById('page-chatbot-messages');
+  if (pageMessagesBox) {
+    const studentName = currentUser?.full_name ? ` **${currentUser.full_name}**` : '';
+    const welcome = `Xin chào${studentName}! 👋 Mình là **CareerBridge AI Advisor**.\n\nHệ thống hiện quản lý dữ liệu **16 nhóm ngành nghề** từ Công nghệ, Kinh tế, Y Dược, Khách sạn, Pháp lý đến Xây dựng và Giáo dục.\n\nBạn có thể hỏi bất kỳ câu hỏi nào về:\n- 🎯 **Gợi ý việc làm phù hợp** dựa trên kỹ năng của bạn\n- 💰 **Bảng tra cứu mức lương** cho từng vị trí\n- 📄 **Đánh giá và tối ưu CV** để gây ấn tượng với nhà tuyển dụng\n- 🎙️ **Kỹ năng phỏng vấn** & câu hỏi phỏng vấn hay gặp\n- 🗺️ **Lộ trình tự học kỹ năng** thực chiến.\n\nNhập câu hỏi bên dưới hoặc chọn gợi ý nhanh phía trên để bắt đầu ngay!`;
+    appendChatMessageUI('ai', welcome, {}, 'page-chatbot-messages');
+  }
+}
+
+function handlePageChatSubmit(event) {
+  event.preventDefault();
+  const input = document.getElementById('page-chatbot-input');
+  if (!input) return;
+  sendChatMessageToAdvisor(input.value, 'page-chatbot-messages', 'page-chatbot-input', 'page-chatbot-typing');
+}
+
+function sendPageQuickPrompt(text) {
+  sendChatMessageToAdvisor(text, 'page-chatbot-messages', 'page-chatbot-input', 'page-chatbot-typing');
+}
+
 // Global exposure
 window.switchRole = switchRole;
 window.navigateTab = navigateTab;
@@ -2432,6 +2820,13 @@ window.quickLoginStudent = quickLoginStudent;
 window.openAuthModal = openAuthModal;
 window.submitLogin = submitLogin;
 window.logout = logout;
+window.toggleChatbotDrawer = toggleChatbotDrawer;
+window.handleChatbotSubmit = handleChatbotSubmit;
+window.sendQuickChatMessage = sendQuickChatMessage;
+window.clearChatbotHistory = clearChatbotHistory;
+window.sendPageQuickPrompt = sendPageQuickPrompt;
+window.handlePageChatSubmit = handlePageChatSubmit;
 
 // Bootstrap on DOM ready
 document.addEventListener('DOMContentLoaded', initApp);
+
